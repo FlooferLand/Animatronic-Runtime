@@ -1,0 +1,64 @@
+using Godot;
+using Project;
+using System.Collections.Generic;
+
+public partial class FootstepManager : Node3D
+{
+	// Export nodes
+	[ExportGroup("Nodes")]
+	[Export] private Player player;
+	[Export] private Node3D head;
+	
+	// Settings
+	[ExportGroup("Settings")]
+	[Export] public float Volume {
+		get => volume;
+		set { volume = value; audio.VolumeDb = value; }
+	}
+	[Export] public float Frequency {
+		get => frequency;
+		set { frequency = value; timer.WaitTime = value; }
+	}
+	private float volume;
+	private float frequency = 0.4f;
+	
+	// Private nodes
+	private BasicLoader loader;
+	private RayCast3D raycast;
+	private AudioStreamPlayer audio;
+	private Timer timer;
+	
+	// Variables
+	public bool Slipping = false;
+
+	#region Private methods
+	public override void _Ready() {
+		// Getting nodes
+		loader = GetNode<BasicLoader>("/root/BasicLoader");
+		raycast = GetNode<RayCast3D>("RayCast");
+		audio = GetNode<AudioStreamPlayer>("AudioPlayer");
+		timer = GetNode<Timer>("Timer");
+		
+		// Initializing stuff
+		timer.Timeout += OneShot;
+		timer.WaitTime = Frequency;
+		audio.VolumeDb = Volume;
+	}
+	#endregion
+	
+	#region Public methods
+	public void Play() {} // => timer.Start();
+	public void Stop() {} // => timer.Stop();
+
+	public bool IsPlaying() =>
+		(!timer.IsStopped() || audio.Playing);
+
+	public void OneShot() {
+		FootstepSoundContainer soundContainer = loader.FootstepSounds["porcelain"];
+		List<AudioStream> stream = (Slipping ? soundContainer.slips : soundContainer.steps);
+		
+		audio.Stream = Utils.ListRandom(stream);
+		audio.Play();
+	}
+	#endregion
+}

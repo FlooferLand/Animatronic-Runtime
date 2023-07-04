@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=3 uid="uid://baoq6qibyufb1"]
+
+[ext_resource type="Script" path="res://objects/player/Player.cs" id="1_vl13a"]
+[ext_resource type="PackedScene" uid="uid://dd7h6xsf8ltvj" path="res://objects/player/FootstepManager.tscn" id="2_cjkar"]
+[ext_resource type="Script" path="res://objects/player/BobManager.cs" id="3_mvpmm"]
+[ext_resource type="Texture2D" uid="uid://drbhv0fi880h0" path="res://sprites/crosshair.png" id="4_pflmo"]
+[ext_resource type="Script" path="res://objects/player/DebugUI.gd" id="5_qkdhd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rgcfp"]
+radius = 0.2
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_vl13a")
+
+[node name="FootstepManager" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_cjkar")]
+player = NodePath("..")
+
+[node name="Head" type="Node3D" parent="." node_paths=PackedStringArray("footstepManager")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+script = ExtResource("3_mvpmm")
+footstepManager = NodePath("../FootstepManager")
+
+[node name="Camera" type="Camera3D" parent="Head"]
+doppler_tracking = 1
+current = true
+fov = 70.0
+near = 0.03
+
+[node name="HUD" type="Control" parent="Head/Camera"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Head/Camera/HUD"]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_pflmo")
+stretch_mode = 5
+
+[node name="DebugUI" type="Control" parent="Head/Camera/HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_qkdhd")
+
+[node name="Framerate" type="Label" parent="Head/Camera/HUD/DebugUI"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 18.0
+offset_right = 193.0
+offset_bottom = 75.0
+
+[node name="Interaction" type="RayCast3D" parent="Head"]
+target_position = Vector3(0, 0, -2)
+collide_with_areas = true
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_rgcfp")
+
+[node name="Flashlight" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+visible = false
+light_color = Color(0.94902, 0.913725, 0.909804, 1)
+light_energy = 5.0
+light_volumetric_fog_energy = 0.25
+spot_range = 10.0

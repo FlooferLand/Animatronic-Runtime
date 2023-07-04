@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkx57bnpoud14"]
+
+[ext_resource type="Script" path="res://scripts/GameInitLoader.cs" id="1_2kf1a"]
+[ext_resource type="PackedScene" uid="uid://cwa3sl0vowxnn" path="res://levels/main.tscn" id="2_g2ibo"]
+
+[node name="GameInitLoader" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_2kf1a")
+MainScene = ExtResource("2_g2ibo")

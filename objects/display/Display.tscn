@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://chtqqsexsffsr"]
+
+[ext_resource type="Script" path="res://objects/display/Display.cs" id="1_rli8t"]
+[ext_resource type="AudioStream" uid="uid://bpbhk5j881b1q" path="res://sound/ui/click.wav" id="2_77ja0"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_2sjfo"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6h00n"]
+
+[node name="Display" type="Node3D"]
+script = ExtResource("1_rli8t")
+
+[node name="Viewport" type="SubViewport" parent="."]
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_2sjfo")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+
+[node name="Collision" type="CollisionShape3D" parent="InteractionArea"]
+shape = SubResource("ConvexPolygonShape3D_6h00n")
+
+[node name="ClickPlayer" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.05)
+stream = ExtResource("2_77ja0")
+bus = &"UI"
+doppler_tracking = 1
