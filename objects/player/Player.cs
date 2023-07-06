@@ -14,6 +14,7 @@ public partial class Player : CharacterBody3D {
 	private FootstepManager footstepManager;
 	private BobManager bobManager;
 	private RayCast3D interactRay;
+	private PauseMenu pauseMenu;
 	
 	#region Settings
 	[ExportGroup("Settings")]
@@ -29,7 +30,7 @@ public partial class Player : CharacterBody3D {
 	public float JumpHeight = 8f;
 	
 	[Export(PropertyHint.Range, "0.1, 10, 0.05")]
-	public float MouseSensitivity = 7f;
+	public float MouseSensitivity = 8f;
 	
 	#endregion
 	
@@ -47,7 +48,7 @@ public partial class Player : CharacterBody3D {
 
 		Vector2 motion = rawMouseMotion;
 		if (!raw) {
-			var speed = (CameraSmoothing ? 0.8f : 25f);
+			var speed = (CameraSmoothing ? 1f : 30f);
 			mouseMotion = mouseMotion.Lerp(rawMouseMotion, speed * delta);
 			motion = mouseMotion;
 			rawMouseMotion = Vector2.Zero;
@@ -63,6 +64,7 @@ public partial class Player : CharacterBody3D {
 		flashlight = GetNode<SpotLight3D>("Flashlight");
 		interactRay = head.GetNode<RayCast3D>("Interaction");
 		footstepManager = GetNode<FootstepManager>("FootstepManager");
+		pauseMenu = GetNode<PauseMenu>("%PauseMenu");
 		Input.MouseMode = Input.MouseModeEnum.Captured;
 		bobManager = (BobManager) head;
 		initialSpeed = Speed;
@@ -80,16 +82,9 @@ public partial class Player : CharacterBody3D {
 
 	private ILookDetector lastLookedAt;
 	public override void _Process(double delta) {
-		#region Cursor lock/unlock
+		#region Pause menu stuff
 		if (Input.IsActionJustPressed("escape")) {
-			switch (Input.MouseMode) {
-				case Input.MouseModeEnum.Visible:
-					Input.MouseMode = Input.MouseModeEnum.Captured;
-					break;
-				default:
-					Input.MouseMode = Input.MouseModeEnum.Visible;
-					break;
-			}
+			pauseMenu.Toggle();
 		}
 		#endregion
 		

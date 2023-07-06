@@ -2,7 +2,7 @@ extends Control
 
 @onready var framerate := $Framerate
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("developer_toggle"):
 		visible = not visible
 	if visible:

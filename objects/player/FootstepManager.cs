@@ -6,7 +6,7 @@ public partial class FootstepManager : Node3D {
 	// Nodes
 	[ExportGroup("Nodes")]
 	[Export] private Player player;
-	private BasicLoader loader;
+	private AssetLoader loader;
 	private RayCast3D raycast;
 	private AudioStreamPlayer3D audio;
 	private Timer timer;
@@ -39,7 +39,7 @@ public partial class FootstepManager : Node3D {
 	#region Private methods
 	public override void _Ready() {
 		// Getting nodes
-		loader = GetNode<BasicLoader>("/root/BasicLoader");
+		loader = GetNode<AssetLoader>($"/root/{nameof(AssetLoader)}");
 		raycast = GetNode<RayCast3D>("RayCast");
 		audio = GetNode<AudioStreamPlayer3D>("AudioPlayer");
 		timer = GetNode<Timer>("Timer");

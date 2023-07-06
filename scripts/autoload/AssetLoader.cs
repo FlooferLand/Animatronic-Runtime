@@ -3,7 +3,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public partial class BasicLoader : Node {
+public partial class AssetLoader : Node {
 	public readonly Dictionary<String, FootstepSoundContainer> FootstepSounds = new();
 	
 	#region Private methods
