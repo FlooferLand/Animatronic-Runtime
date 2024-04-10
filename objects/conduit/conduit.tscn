@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c36npfppg6mxv"]
+
+[ext_resource type="Script" path="res://objects/conduit/Conduit.cs" id="1_abqcr"]
+
+[node name="Conduit" type="Node3D"]
+script = ExtResource("1_abqcr")

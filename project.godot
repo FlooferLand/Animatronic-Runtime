@@ -12,8 +12,8 @@ config_version=5
 
 config/name="Animatronic Runtime"
 run/main_scene="res://levels/game_init_loader/game_init_loader.tscn"
-config/features=PackedStringArray("4.1")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.1", "C#")
+config/icon="res://sprites/icon.png"
 
 [audio]
 

@@ -62,7 +62,10 @@ public partial class FootstepManager : Node3D {
 		Slipping = false;
 		OneShot();
 	}
-	public void Stop() => timer.Stop();
+	public void Stop() {
+		timer.Stop();
+	}
+
 	public bool IsPlaying() =>
 		(!timer.IsStopped() || audio.Playing);
 
@@ -100,7 +103,7 @@ public partial class FootstepManager : Node3D {
         // Making the footstep lowpass filter shift around based on the step force
         lowPassEffect.CutoffHz = Mathf.Lerp(
 	        lowPassEffect.CutoffHz,
-	        stepForce * 5000f,
+	        stepForce * 6000f,
 	        4f * (float) delta
 	    );
 	}

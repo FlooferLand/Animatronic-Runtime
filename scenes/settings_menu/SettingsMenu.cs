@@ -1,4 +1,4 @@
-namespace Project; using Settings;
+namespace Project; using SettingsMenuParser;
 using Godot;
 
 public partial class SettingsMenu : Control {
@@ -9,26 +9,41 @@ public partial class SettingsMenu : Control {
 		// Procedurally making the settings menu
 		var sectionFields = EngineSettings.Get.GetType().GetFields();
 		foreach (var sectionField in sectionFields) {
-			// Creating a section
+			#region Creating a section
+			// Creating the section
 			var section = new VBoxContainer();
-			section.Name = sectionField.Name;
-			tabContainer.AddChild(section);
+			
+			// Adding a margin container for the section
+			var margin = new MarginContainer();
+			foreach (var direction in new[] { "top", "left", "bottom", "right" }) {
+				margin.AddThemeConstantOverride($"margin_{direction}", 25);
+			}
+			margin.AddChild(section);
+			
+			// Adding a scroll container for the section
+			var scroll = new ScrollContainer();
+			scroll.AddChild(margin);
+			
+			// Adding the section
+			scroll.Name = sectionField.Name;
+			tabContainer.AddChild(scroll);
+			#endregion
 			
 			// Getting the settings for that section
 			var settingFields = sectionField.FieldType.GetFields();
 			foreach (var settingField in settingFields) {
 				var setting = new HSplitContainer();
 
-				// Creating the setting name
+				// Creating the setting name UI
 				var name = new Label();
 				name.Text = settingField.Name;
 				setting.AddChild(name);
-                
-				// Creating the setting value
-				GD.Print($"Attributes: {settingField.CustomAttributes}");
-				// var value = new Label();
-				// value.Text = "null";
-				// setting.AddChild(value);
+				
+				// Creating the setting value UI
+				var uiType = Parser.ParseFieldAttributes(sectionField, settingField);
+				if (uiType is { } uiElem) {
+					setting.AddChild(uiElem.GetNode());
+				}
 				
 				// Adding the setting to the section
 				section.AddChild(setting);
