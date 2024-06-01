@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwa3sl0vowxnn"]
+[gd_scene load_steps=6 format=3 uid="uid://cwa3sl0vowxnn"]
 
 [ext_resource type="Environment" uid="uid://kwl33ytv3kxc" path="res://other/world_env.tres" id="1_fsan4"]
 [ext_resource type="PackedScene" uid="uid://baoq6qibyufb1" path="res://objects/player/Player.tscn" id="1_j41br"]
 [ext_resource type="Material" uid="uid://dcmmxy1b8kd6q" path="res://materials/floor_tiles.material" id="2_6uvxh"]
 [ext_resource type="PackedScene" uid="uid://chtqqsexsffsr" path="res://objects/display/Display.tscn" id="4_alx7i"]
 [ext_resource type="PackedScene" uid="uid://bc6p4mgsei7kd" path="res://objects/display/TestUI.tscn" id="5_fjwgt"]
-[ext_resource type="VoxelGIData" uid="uid://0k2tfmtn35im" path="res://other/main.VoxelGI.tres" id="6_ne2wq"]
 
 [node name="Main" type="Node3D"]
 
@@ -38,11 +37,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -3)
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_fsan4")
-
-[node name="VoxelGI" type="VoxelGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.28018, 0)
-size = Vector3(26, 8, 26)
-data = ExtResource("6_ne2wq")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28772, 0.431659, -8.07112)
