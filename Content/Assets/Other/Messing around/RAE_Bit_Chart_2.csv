@@ -1,0 +1,192 @@
+Rolfe - Mouth,1 TD,Valve
+Rolfe - Left Eye Lid,2 TD,Valve
+Rolfe - Right Eye Lid,3 TD,Valve
+Rolfe - Eyes Left,4 TD,Valve
+Rolfe - Eyes Right,5 TD,Valve
+Rolfe - Head Left,6 TD,Valve
+Rolfe - Head Right,7 TD,Valve
+Rolfe - Head Up,8 TD,Valve
+Rolfe - Left Ear,9 TD,Valve
+Rolfe - Right Ear,10 TD,Valve
+Rolfe - Left Arm Raise,11 TD,Valve
+Rolfe - Left Arm Twist,12 TD,Valve
+Rolfe - Left Elbow,13 TD,Valve
+Rolfe - Body Twist Left,14 TD,Valve
+Rolfe - Body Twist Right,15 TD,Valve
+Rolfe - Body Lean,16 TD,Valve
+Rolfe - Right Arm Raise,17 TD,Valve
+Rolfe - Right Arm Twist,18 TD,Valve
+Rolfe - Right Elbow Twist,19 TD,Valve
+Rolfe - Earl Head Tilt,20 TD,Valve
+Duke - Head Right,21 TD,Valve
+Duke - Head Up,22 TD,Valve
+Duke - Left Ear,23 TD,Valve
+Duke - Right Ear,24 TD,Valve
+Duke - Head Left,25 TD,Valve
+Duke - Left Eyelid,26 TD,Valve
+Duke - Right Eyelid,27 TD,Valve
+Duke - Eyes Left,28 TD,Valve
+Duke - Eyes Right,29 TD,Valve
+Duke - Mouth,30 TD,Valve
+Duke - Right Elbow,31 TD,Valve
+Duke - Left Foot (Hi-Hat),32 TD,Valve
+Duke - Left Arm Swing,33 TD,Valve
+Duke - Right Arm Swing,34 TD,Valve
+Duke - Left Elbow,35 TD,Valve
+Rolfe - Earl Mouth,36 TD,Valve
+Rolfe - Earl Eyebrow,37 TD,Valve
+Props - Sun Mouth,38 TD,Valve
+Props - Sun Raise,39 TD,Valve
+Specials - Dual Pressure (TD),40 TD,Valve/Regulator
+Fats - Left Eyelid,41 TD,Valve
+Fats - Right Eyelid,42 TD,Valve
+Fats - Eyes Left,43 TD,Valve
+Fats - Eyes Right,44 TD,Valve
+Fats - Mouth,45 TD,Valve
+Props - Moon Mouth,46 TD,Valve
+Props - Moon Raise,47 TD,Valve
+Props - Looney Bird Hands,48 TD,Valve
+Props - Antioch Down,49 TD,Valve
+Props - Baby Bear Raise,50 TD,Valve
+Fats - Head Tip Left,51 TD,Valve
+Fats - Head Tip Right,52 TD,Valve
+Fats - Head Up,53 TD,Valve
+Fats - Head Left,54 TD,Valve
+Fats - Head Right,55 TD,Valve
+Blank,56 TD,N/A
+Fats - Left Arm Swing,57 TD,Valve
+Fats - Right Arm Swing,58 TD,Valve
+Fats - Left Elbow,59 TD,Valve
+Fats - Right Elbow,60 TD,Valve
+Fats - Foot Tap,61 TD,Valve
+Fats - Body Lean,62 TD,Valve
+Duke - Right Foot (Bass Drum),63 TD,Valve
+Duke - Body Lean,64 TD,Valve
+Blank,65 TD,N/A
+Organ - Top Blue,66 TD,Prop Light
+Organ - Top Red,67 TD,Prop Light
+Organ - Top Amber,68 TD,Prop Light
+Organ - Top Green,69 TD,Prop Light
+Blank,70 TD,N/A
+Organ - Leg Top,71 TD,Prop Light
+Organ - Leg Mid,72 TD,Prop Light
+Organ - Leg Bottom,73 TD,Prop Light
+Organ - Cont Strobe,74 TD,Prop Light
+Organ - Flash Strobe,75 TD,Prop Light
+Sign - Inner,76 TD,Prop Light
+Sign - Mid,77 TD,Prop Light
+Sign - Outer,78 TD,Prop Light
+Sign - Cont Strobe,79 TD,Prop Light
+Sign - Flash Strobe,80 TD,Prop Light
+Spots - Mitzi,81 TD,Spot Light
+Spots - Beach Bear,82 TD,Spot Light
+Spots - Looney Bird,83 TD,Spot Light
+Spots - Billy Bob,84 TD,Spot Light
+Spots - Fats,85 TD,Spot Light
+Spots - Duke,86 TD,Spot Light
+Spots - Rolfe,87 TD,Spot Light
+Spots - Earl,88 TD,Spot Light
+Curtains - Stage Right Open,89 TD,Curtain Motor
+Curtains - Stage Right Close,90 TD,Curtain Motor
+Curtains - Center Stage Open,91 TD,Curtain Motor
+Curtains - Center Stage Close,92 TD,Curtain Motor
+Curtains - Stage Left Open,93 TD,Curtain Motor
+Curtains - Stage Left Close,94 TD,Curtain Motor
+N/A - End of RAE TD Bits
+N/A - End of RAE TD Bits
+Beach Bear - Left Eyelid,1 BD,Valve
+Beach Bear - Right Eyelid,2 BD,Valve
+Beach Bear - Eye Cross,3 BD,Valve
+Beach Bear - Left Hand Slide,4 BD,Valve
+Beach Bear - Guitar Raise,5 BD,Valve
+Beach Bear - Head Left,6 BD,Valve
+Beach Bear - Head Right,7 BD,Valve
+Beach Bear - Head Up,8 BD,Valve
+Beach Bear - Left Leg Kick,9 BD,Valve
+Beach Bear - Right Leg Kick,10 BD,Valve
+Beach Bear - Right Arm Raise,11 BD,Valve
+Beach Bear - Right Arm Twist,12 BD,Valve
+Beach Bear - Right Elbow Twist,13 BD,Valve
+Beach Bear - Right Wrist,14 BD,Valve
+Beach Bear - Body Lean,15 BD,Valve
+Beach Bear - Mouth,16 BD,Valve
+Looney Bird - Mouth,17 BD,Valve
+Mitzi - Right Arm Raise,18 BD,Valve
+Mitzi - Right Elbow,19 BD,Valve
+Mitzi - Right Arm Twist,20 BD,Valve
+Looney Bird - Head Right,21 BD,Valve
+Looney Bird - Raise,22 BD,Valve
+Mitzi - Left Arm Raise,23 BD,Valve
+Mitzi - Left Elbow,24 BD,Valve
+Mitzi - Left Arm Twist,25 BD,Valve
+Mitzi - Left Ear,26 BD,Valve
+Mitzi - Right Ear,27 BD,Valve
+Mitzi - Head Left,28 BD,Valve
+Mitzi - Head Right,29 BD,Valve
+Mitzi - Head Up,30 BD,Valve
+Mitzi - Left Eyelid,31 BD,Valve
+Mitzi - Right Eyelid,32 BD,Valve
+Mitzi - Eyes Left,33 BD,Valve
+Mitzi - Eyes Right,34 BD,Valve
+Mitzi - Mouth,35 BD,Valve
+Mitzi - Body Twist Left,36 BD,Valve
+Mitzi - Body Twist Right,37 BD,Valve
+Mitzi - Body Lean,38 BD,Valve
+Billy Bob - Left Arm Slide,39 BD,Valve
+Billy Bob - Guitar Raise,40 BD,Valve
+Looney Bird - Left Eyelid,41 BD,Valve
+Looney Bird - Right Eyelid,42 BD,Valve
+Looney Bird - Eye Cross,43 BD,Valve
+Billy Bob - Foot Tap,44 BD,Valve
+Blank,45 BD,N/A
+Billy Bob - Mouth,46 BD,Valve
+Billy Bob - Left Eyelid,47 BD,Valve
+Billy Bob - Right Eyelid,48 BD,Valve
+Billy Bob - Eyes Left,49 BD,Valve
+Billy Bob - Eyes Right,50 BD,Valve
+Billy Bob - Head Left,51 BD,Valve
+Billy Bob - Head Right,52 BD,Valve
+Billy Bob - Head Tip Left,53 BD,Valve
+Billy Bob - Head Tip Right,54 BD,Valve
+Billy Bob - Head Up,55 BD,Valve
+Billy Bob - Right Arm Raise,56 BD,Valve
+Billy Bob - Right Arm Twist,57 BD,Valve
+Billy Bob - Right Elbow Twist,58 BD,Valve
+Billy Bob - Right Wrist,59 BD,Valve
+Specials - Dual Pressure (BD),60 BD,Valve/Regulator
+Billy Bob - Body Twist Left,61 BD,Valve
+Billy Bob - Body Twist Right,62 BD,Valve
+Billy Bob - Body Lean,63 BD,Valve
+Specials - Tape Stop,64 BD,Tape Control
+Specials - Tape Rewind,65 BD,Tape Control
+Floods - Stage Right Blue,66 BD,Flood Light
+Floods - Stage Right Green,67 BD,Flood Light
+Floods - Stage Right Amber,68 BD,Flood Light
+Floods - Stage Right Red,69 BD,Flood Light
+Prop Lights - Applause,70 BD,Prop Light
+Floods - Center Stage Blue,71 BD,Flood Light
+Floods - Center Stage Green,72 BD,Flood Light
+Floods - Center Stage Amber,73 BD,Flood Light
+Floods - Center Stage Red,74 BD,Flood Light
+Prop Lights - Drums,75 BD,Prop Light
+Floods - Stage Left Blue,76 BD,Flood Light
+Floods - Stage Left Green,77 BD,Flood Light
+Floods - Stage Left Amber,78 BD,Flood Light
+Floods - Stage Left Red,79 BD,Flood Light
+Prop Lights - Fire/Still,80 BD,Prop Light
+Floods - Backdrop Outside Blue,81 BD,Flood Light
+Floods - Backdrop Inside Amber,82 BD,Flood Light
+Floods - Treeline Blue,83 BD,Flood Light
+Floods - Backdrop Inside Blue,84 BD,Flood Light
+Floods - Treeline Red,85 BD,Flood Light
+Floods - Bushes Green,86 BD,Flood Light
+Floods - Bushes Red/Amber,87 BD,Flood Light
+Spots - Sun Spot,88 BD,Spot Light
+Spots - Moon Spot,89 BD,Spot Light
+Spots - Spider Spot,90 BD,Spot Light
+Prop Lights - Gas Pump,91 BD,Prop Light
+Stage Lights - Service Station (Red),92 BD,Flood Lights
+Stage Lights - Service Station (Blue),93 BD,Flood Lights
+Stage Lights - Rainbow #1 (Red),94 BD,Flood Lights
+Stage Lights - Rainbow #2 (Yellow),95 BD,Flood Lights
+Spots - Guitar Spot,96 BD,Spot Light

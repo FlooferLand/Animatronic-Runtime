@@ -1,0 +1,956 @@
+[1TD]
+name = "Rolfe - Mouth"
+bone = "Root:TODO"
+type = "Valve"
+
+[2TD]
+name = "Rolfe - Left Eye Lid"
+bone = "Root:TODO"
+type = "Valve"
+
+[3TD]
+name = "Rolfe - Right Eye Lid"
+bone = "Root:TODO"
+type = "Valve"
+
+[4TD]
+name = "Rolfe - Eyes Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[5TD]
+name = "Rolfe - Eyes Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[6TD]
+name = "Rolfe - Head Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[7TD]
+name = "Rolfe - Head Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[8TD]
+name = "Rolfe - Head Up"
+bone = "Root:TODO"
+type = "Valve"
+
+[9TD]
+name = "Rolfe - Left Ear"
+bone = "Root:TODO"
+type = "Valve"
+
+[10TD]
+name = "Rolfe - Right Ear"
+bone = "Root:TODO"
+type = "Valve"
+
+[11TD]
+name = "Rolfe - Left Arm Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[12TD]
+name = "Rolfe - Left Arm Twist"
+bone = "Root:TODO"
+type = "Valve"
+
+[13TD]
+name = "Rolfe - Left Elbow"
+bone = "Root:TODO"
+type = "Valve"
+
+[14TD]
+name = "Rolfe - Body Twist Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[15TD]
+name = "Rolfe - Body Twist Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[16TD]
+name = "Rolfe - Body Lean"
+bone = "Root:TODO"
+type = "Valve"
+
+[17TD]
+name = "Rolfe - Right Arm Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[18TD]
+name = "Rolfe - Right Arm Twist"
+bone = "Root:TODO"
+type = "Valve"
+
+[19TD]
+name = "Rolfe - Right Elbow Twist"
+bone = "Root:TODO"
+type = "Valve"
+
+[20TD]
+name = "Rolfe - Earl Head Tilt"
+bone = "Root:TODO"
+type = "Valve"
+
+[21TD]
+name = "Duke - Head Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[22TD]
+name = "Duke - Head Up"
+bone = "Root:TODO"
+type = "Valve"
+
+[23TD]
+name = "Duke - Left Ear"
+bone = "Root:TODO"
+type = "Valve"
+
+[24TD]
+name = "Duke - Right Ear"
+bone = "Root:TODO"
+type = "Valve"
+
+[25TD]
+name = "Duke - Head Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[26TD]
+name = "Duke - Left Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[27TD]
+name = "Duke - Right Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[28TD]
+name = "Duke - Eyes Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[29TD]
+name = "Duke - Eyes Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[30TD]
+name = "Duke - Mouth"
+bone = "Root:TODO"
+type = "Valve"
+
+[31TD]
+name = "Duke - Right Elbow"
+bone = "Root:TODO"
+type = "Valve"
+
+[32TD]
+name = "Duke - Left Foot (Hi-Hat)"
+bone = "Root:TODO"
+type = "Valve"
+
+[33TD]
+name = "Duke - Left Arm Swing"
+bone = "Root:TODO"
+type = "Valve"
+
+[34TD]
+name = "Duke - Right Arm Swing"
+bone = "Root:TODO"
+type = "Valve"
+
+[35TD]
+name = "Duke - Left Elbow"
+bone = "Root:TODO"
+type = "Valve"
+
+[36TD]
+name = "Rolfe - Earl Mouth"
+bone = "Root:TODO"
+type = "Valve"
+
+[37TD]
+name = "Rolfe - Earl Eyebrow"
+bone = "Root:TODO"
+type = "Valve"
+
+[38TD]
+name = "Props - Sun Mouth"
+bone = "Root:TODO"
+type = "Valve"
+
+[39TD]
+name = "Props - Sun Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[40TD]
+name = "Specials - Dual Pressure (TD)"
+bone = "Root:TODO"
+type = "Valve/Regulator"
+
+[41TD]
+name = "Fats - Left Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[42TD]
+name = "Fats - Right Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[43TD]
+name = "Fats - Eyes Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[44TD]
+name = "Fats - Eyes Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[45TD]
+name = "Fats - Mouth"
+bone = "Root:TODO"
+type = "Valve"
+
+[46TD]
+name = "Props - Moon Mouth"
+bone = "Root:TODO"
+type = "Valve"
+
+[47TD]
+name = "Props - Moon Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[48TD]
+name = "Props - Looney Bird Hands"
+bone = "Root:TODO"
+type = "Valve"
+
+[49TD]
+name = "Props - Antioch Down"
+bone = "Root:TODO"
+type = "Valve"
+
+[50TD]
+name = "Props - Baby Bear Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[51TD]
+name = "Fats - Head Tip Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[52TD]
+name = "Fats - Head Tip Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[53TD]
+name = "Fats - Head Up"
+bone = "Root:TODO"
+type = "Valve"
+
+[54TD]
+name = "Fats - Head Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[55TD]
+name = "Fats - Head Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[56TD]
+name = "Blank"
+bone = "Root:TODO"
+type = "N/A"
+
+[57TD]
+name = "Fats - Left Arm Swing"
+bone = "Root:TODO"
+type = "Valve"
+
+[58TD]
+name = "Fats - Right Arm Swing"
+bone = "Root:TODO"
+type = "Valve"
+
+[59TD]
+name = "Fats - Left Elbow"
+bone = "Root:TODO"
+type = "Valve"
+
+[60TD]
+name = "Fats - Right Elbow"
+bone = "Root:TODO"
+type = "Valve"
+
+[61TD]
+name = "Fats - Foot Tap"
+bone = "Root:TODO"
+type = "Valve"
+
+[62TD]
+name = "Fats - Body Lean"
+bone = "Root:TODO"
+type = "Valve"
+
+[63TD]
+name = "Duke - Right Foot (Bass Drum)"
+bone = "Root:TODO"
+type = "Valve"
+
+[64TD]
+name = "Duke - Body Lean"
+bone = "Root:TODO"
+type = "Valve"
+
+[65TD]
+name = "Blank"
+bone = "Root:TODO"
+type = "N/A"
+
+[66TD]
+name = "Organ - Top Blue"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[67TD]
+name = "Organ - Top Red"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[68TD]
+name = "Organ - Top Amber"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[69TD]
+name = "Organ - Top Green"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[70TD]
+name = "Blank"
+bone = "Root:TODO"
+type = "N/A"
+
+[71TD]
+name = "Organ - Leg Top"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[72TD]
+name = "Organ - Leg Mid"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[73TD]
+name = "Organ - Leg Bottom"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[74TD]
+name = "Organ - Cont Strobe"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[75TD]
+name = "Organ - Flash Strobe"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[76TD]
+name = "Sign - Inner"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[77TD]
+name = "Sign - Mid"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[78TD]
+name = "Sign - Outer"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[79TD]
+name = "Sign - Cont Strobe"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[80TD]
+name = "Sign - Flash Strobe"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[81TD]
+name = "Spots - Mitzi"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[82TD]
+name = "Spots - Beach Bear"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[83TD]
+name = "Spots - Looney Bird"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[84TD]
+name = "Spots - Billy Bob"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[85TD]
+name = "Spots - Fats"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[86TD]
+name = "Spots - Duke"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[87TD]
+name = "Spots - Rolfe"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[88TD]
+name = "Spots - Earl"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[89TD]
+name = "Curtains - Stage Right Open"
+bone = "Root:TODO"
+type = "Curtain Motor"
+
+[90TD]
+name = "Curtains - Stage Right Close"
+bone = "Root:TODO"
+type = "Curtain Motor"
+
+[91TD]
+name = "Curtains - Center Stage Open"
+bone = "Root:TODO"
+type = "Curtain Motor"
+
+[92TD]
+name = "Curtains - Center Stage Close"
+bone = "Root:TODO"
+type = "Curtain Motor"
+
+[93TD]
+name = "Curtains - Stage Left Open"
+bone = "Root:TODO"
+type = "Curtain Motor"
+
+[94TD]
+name = "Curtains - Stage Left Close"
+bone = "Root:TODO"
+type = "Curtain Motor"
+
+
+# N/A - End of RAE TD Bits
+
+
+# N/A - End of RAE TD Bits
+
+[1BD]
+name = "Beach Bear - Left Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[2BD]
+name = "Beach Bear - Right Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[3BD]
+name = "Beach Bear - Eye Cross"
+bone = "Root:TODO"
+type = "Valve"
+
+[4BD]
+name = "Beach Bear - Left Hand Slide"
+bone = "Root:TODO"
+type = "Valve"
+
+[5BD]
+name = "Beach Bear - Guitar Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[6BD]
+name = "Beach Bear - Head Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[7BD]
+name = "Beach Bear - Head Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[8BD]
+name = "Beach Bear - Head Up"
+bone = "Root:TODO"
+type = "Valve"
+
+[9BD]
+name = "Beach Bear - Left Leg Kick"
+bone = "Root:TODO"
+type = "Valve"
+
+[10BD]
+name = "Beach Bear - Right Leg Kick"
+bone = "Root:TODO"
+type = "Valve"
+
+[11BD]
+name = "Beach Bear - Right Arm Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[12BD]
+name = "Beach Bear - Right Arm Twist"
+bone = "Root:TODO"
+type = "Valve"
+
+[13BD]
+name = "Beach Bear - Right Elbow Twist"
+bone = "Root:TODO"
+type = "Valve"
+
+[14BD]
+name = "Beach Bear - Right Wrist"
+bone = "Root:TODO"
+type = "Valve"
+
+[15BD]
+name = "Beach Bear - Body Lean"
+bone = "Root:TODO"
+type = "Valve"
+
+[16BD]
+name = "Beach Bear - Mouth"
+bone = "Root:TODO"
+type = "Valve"
+
+[17BD]
+name = "Looney Bird - Mouth"
+bone = "Root:TODO"
+type = "Valve"
+
+[18BD]
+name = "Mitzi - Right Arm Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[19BD]
+name = "Mitzi - Right Elbow"
+bone = "Root:TODO"
+type = "Valve"
+
+[20BD]
+name = "Mitzi - Right Arm Twist"
+bone = "Root:TODO"
+type = "Valve"
+
+[21BD]
+name = "Looney Bird - Head Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[22BD]
+name = "Looney Bird - Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[23BD]
+name = "Mitzi - Left Arm Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[24BD]
+name = "Mitzi - Left Elbow"
+bone = "Root:TODO"
+type = "Valve"
+
+[25BD]
+name = "Mitzi - Left Arm Twist"
+bone = "Root:TODO"
+type = "Valve"
+
+[26BD]
+name = "Mitzi - Left Ear"
+bone = "Root:TODO"
+type = "Valve"
+
+[27BD]
+name = "Mitzi - Right Ear"
+bone = "Root:TODO"
+type = "Valve"
+
+[28BD]
+name = "Mitzi - Head Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[29BD]
+name = "Mitzi - Head Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[30BD]
+name = "Mitzi - Head Up"
+bone = "Root:TODO"
+type = "Valve"
+
+[31BD]
+name = "Mitzi - Left Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[32BD]
+name = "Mitzi - Right Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[33BD]
+name = "Mitzi - Eyes Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[34BD]
+name = "Mitzi - Eyes Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[35BD]
+name = "Mitzi - Mouth"
+bone = "Root:TODO"
+type = "Valve"
+
+[36BD]
+name = "Mitzi - Body Twist Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[37BD]
+name = "Mitzi - Body Twist Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[38BD]
+name = "Mitzi - Body Lean"
+bone = "Root:TODO"
+type = "Valve"
+
+[39BD]
+name = "Billy Bob - Left Arm Slide"
+bone = "Root:TODO"
+type = "Valve"
+
+[40BD]
+name = "Billy Bob - Guitar Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[41BD]
+name = "Looney Bird - Left Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[42BD]
+name = "Looney Bird - Right Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[43BD]
+name = "Looney Bird - Eye Cross"
+bone = "Root:TODO"
+type = "Valve"
+
+[44BD]
+name = "Billy Bob - Foot Tap"
+bone = "Root:TODO"
+type = "Valve"
+
+[45BD]
+name = "Blank"
+bone = "Root:TODO"
+type = "N/A"
+
+[46BD]
+name = "Billy Bob - Mouth"
+bone = "Root:TODO"
+type = "Valve"
+
+[47BD]
+name = "Billy Bob - Left Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[48BD]
+name = "Billy Bob - Right Eyelid"
+bone = "Root:TODO"
+type = "Valve"
+
+[49BD]
+name = "Billy Bob - Eyes Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[50BD]
+name = "Billy Bob - Eyes Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[51BD]
+name = "Billy Bob - Head Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[52BD]
+name = "Billy Bob - Head Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[53BD]
+name = "Billy Bob - Head Tip Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[54BD]
+name = "Billy Bob - Head Tip Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[55BD]
+name = "Billy Bob - Head Up"
+bone = "Root:TODO"
+type = "Valve"
+
+[56BD]
+name = "Billy Bob - Right Arm Raise"
+bone = "Root:TODO"
+type = "Valve"
+
+[57BD]
+name = "Billy Bob - Right Arm Twist"
+bone = "Root:TODO"
+type = "Valve"
+
+[58BD]
+name = "Billy Bob - Right Elbow Twist"
+bone = "Root:TODO"
+type = "Valve"
+
+[59BD]
+name = "Billy Bob - Right Wrist"
+bone = "Root:TODO"
+type = "Valve"
+
+[60BD]
+name = "Specials - Dual Pressure (BD)"
+bone = "Root:TODO"
+type = "Valve/Regulator"
+
+[61BD]
+name = "Billy Bob - Body Twist Left"
+bone = "Root:TODO"
+type = "Valve"
+
+[62BD]
+name = "Billy Bob - Body Twist Right"
+bone = "Root:TODO"
+type = "Valve"
+
+[63BD]
+name = "Billy Bob - Body Lean"
+bone = "Root:TODO"
+type = "Valve"
+
+[64BD]
+name = "Specials - Tape Stop"
+bone = "Root:TODO"
+type = "Tape Control"
+
+[65BD]
+name = "Specials - Tape Rewind"
+bone = "Root:TODO"
+type = "Tape Control"
+
+[66BD]
+name = "Floods - Stage Right Blue"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[67BD]
+name = "Floods - Stage Right Green"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[68BD]
+name = "Floods - Stage Right Amber"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[69BD]
+name = "Floods - Stage Right Red"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[70BD]
+name = "Prop Lights - Applause"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[71BD]
+name = "Floods - Center Stage Blue"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[72BD]
+name = "Floods - Center Stage Green"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[73BD]
+name = "Floods - Center Stage Amber"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[74BD]
+name = "Floods - Center Stage Red"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[75BD]
+name = "Prop Lights - Drums"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[76BD]
+name = "Floods - Stage Left Blue"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[77BD]
+name = "Floods - Stage Left Green"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[78BD]
+name = "Floods - Stage Left Amber"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[79BD]
+name = "Floods - Stage Left Red"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[80BD]
+name = "Prop Lights - Fire/Still"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[81BD]
+name = "Floods - Backdrop Outside Blue"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[82BD]
+name = "Floods - Backdrop Inside Amber"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[83BD]
+name = "Floods - Treeline Blue"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[84BD]
+name = "Floods - Backdrop Inside Blue"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[85BD]
+name = "Floods - Treeline Red"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[86BD]
+name = "Floods - Bushes Green"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[87BD]
+name = "Floods - Bushes Red/Amber"
+bone = "Root:TODO"
+type = "Flood Light"
+
+[88BD]
+name = "Spots - Sun Spot"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[89BD]
+name = "Spots - Moon Spot"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[90BD]
+name = "Spots - Spider Spot"
+bone = "Root:TODO"
+type = "Spot Light"
+
+[91BD]
+name = "Prop Lights - Gas Pump"
+bone = "Root:TODO"
+type = "Prop Light"
+
+[92BD]
+name = "Stage Lights - Service Station (Red)"
+bone = "Root:TODO"
+type = "Flood Lights"
+
+[93BD]
+name = "Stage Lights - Service Station (Blue)"
+bone = "Root:TODO"
+type = "Flood Lights"
+
+[94BD]
+name = "Stage Lights - Rainbow #1 (Red)"
+bone = "Root:TODO"
+type = "Flood Lights"
+
+[95BD]
+name = "Stage Lights - Rainbow #2 (Yellow)"
+bone = "Root:TODO"
+type = "Flood Lights"
+
+[96BD]
+name = "Spots - Guitar Spot"
+bone = "Root:TODO"
+type = "Spot Light"
+

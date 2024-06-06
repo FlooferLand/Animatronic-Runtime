@@ -36,7 +36,7 @@ protected:
 	virtual void OnComponentDestroyed(bool bDestroyingHierarchy) override;
 
 	// Components
-	USpotLightComponent* SpotLight;
+	UPROPERTY()	USpotLightComponent* SpotLight;
 private:
 	void UpdateSpotlightIntensity();
 };

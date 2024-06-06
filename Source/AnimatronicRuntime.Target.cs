@@ -8,14 +8,14 @@ public class AnimatronicRuntimeTarget : TargetRules
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_4;
-		ExtraModuleNames.Add("AnimatronicRuntime");
+		ExtraModuleNames.Add("PrimaryGameModule");
 		RegisterModulesCreatedByRider();
 	}
 
 	private void RegisterModulesCreatedByRider()
 	{
 		ExtraModuleNames.AddRange(new[] {
-			"Player", "Utility", "Components"
+			"Player", "Utility", "Components", "Animatronic", "Data"
 		});
 	}
 }

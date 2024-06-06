@@ -1,10 +1,8 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 using UnrealBuildTool;
 
-public class AnimatronicRuntime : ModuleRules
+public class PrimaryGameModule : ModuleRules
 {
-	public AnimatronicRuntime(ReadOnlyTargetRules Target) : base(Target)
+	public PrimaryGameModule(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	

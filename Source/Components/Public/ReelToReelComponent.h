@@ -2,24 +2,24 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "HandheldCameraEffect.generated.h"
+#include "ReelToReelComponent.generated.h"
 
 
+// Reads data from a tape into real-time bit values and manages playback
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
-class COMPONENTS_API UHandheldCameraEffect : public UActorComponent
-{
+class COMPONENTS_API UReelToReelComponent : public UActorComponent {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this component's properties
-	UHandheldCameraEffect();
-
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Effect")
-	bool bEnabled = false;
+	UReelToReelComponent();
 
 protected:
+	// Called when the game starts
 	virtual void BeginPlay() override;
+
+public:
+	// Called every frame
 	virtual void TickComponent(float deltaTime, ELevelTick tickType,
 	                           FActorComponentTickFunction* thisTickFunction) override;
-	virtual void DestroyComponent(bool bPromoteChildren) override;
 };

@@ -1,4 +1,4 @@
-﻿#include "Components.h"
+﻿#include "Module.h"
 
 #define LOCTEXT_NAMESPACE "FComponentsModule"
 

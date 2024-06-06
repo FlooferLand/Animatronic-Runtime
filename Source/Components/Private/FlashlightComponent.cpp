@@ -13,7 +13,6 @@ UFlashlightComponent::UFlashlightComponent() {
 	SpotLight = CreateDefaultSubobject<USpotLightComponent>(TEXT("SpotLight"));
 	SpotLight->SetupAttachment(this);
 	SpotLight->SetVisibility(false);
-
 }
 
 void UFlashlightComponent::TurnOn() {

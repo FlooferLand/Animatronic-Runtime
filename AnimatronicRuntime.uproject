@@ -5,7 +5,7 @@
 	"Description": "The animatronic animation engine. Made by FlooferLand",
 	"Modules": [
 		{
-			"Name": "AnimatronicRuntime",
+			"Name": "PrimaryGameModule",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -21,6 +21,16 @@
 		},
 		{
 			"Name": "Components",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "Animatronic",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "Data",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
