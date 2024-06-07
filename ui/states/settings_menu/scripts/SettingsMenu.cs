@@ -3,6 +3,8 @@ using Project.SettingsMenuParser;
 namespace Project;
 using Godot;
 
+// TODO: Parse these at compile-time (editor time) and not runtime
+
 public partial class SettingsMenu : Control {
 	private TabContainer tabContainer;
 	public override void _Ready() {
@@ -32,17 +34,17 @@ public partial class SettingsMenu : Control {
 			#endregion
 			
 			// Getting the settings for that section
-			var settingFields = sectionField.FieldType.GetFields();
-			foreach (var settingField in settingFields) {
+			var settingProperties = sectionField.FieldType.GetProperties();
+			foreach (var settingProperty in settingProperties) {
 				var setting = new HSplitContainer();
 
 				// Creating the setting name UI
 				var name = new Label();
-				name.Text = settingField.Name;
+				name.Text = settingProperty.Name;
 				setting.AddChild(name);
 				
 				// Creating the setting value UI
-				var uiType = Parser.ParseFieldAttributes(sectionField, settingField);
+				var uiType = Parser.ParseFieldAttributes(sectionField, settingProperty);
 				if (uiType != null) {
 					setting.AddChild(uiType.GetNode());
 				}
