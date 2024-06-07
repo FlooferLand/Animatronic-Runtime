@@ -1,9 +1,9 @@
-![banner](./marketing/banner.webp)
+![# Animatronic Runtime](./marketing/banner.webp)
 
-# Animatronic Runtime
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/FlooferLand/Animatronic-Runtime?style=flat-square&color=brightgreen)
-![Lines of code](https://img.shields.io/tokei/lines/github/FlooferLand/Animatronic-Runtime?style=flat-square)
-![Created at](https://img.shields.io/github/created-at/FlooferLand/Animatronic-Runtime)
+![Created at](https://img.shields.io/github/created-at/FlooferLand/Animatronic-Runtime?style=plastic&logo=github&link=https://github.com/FlooferLand/Animatronic-Runtime)
+![Code size in bytes](https://img.shields.io/github/languages/code-size/FlooferLand/Animatronic-Runtime?style=plastic&color=brightgreen&link=https://github.com/FlooferLand/Animatronic-Runtime)
+![Issue tracker](https://img.shields.io/github/issues/FlooferLand/Animatronic-Runtime?style=plastic&link=https://github.com/FlooferLand/Animatronic-Runtime/issues)
+![Lines of code](https://img.shields.io/tokei/lines/github/FlooferLand/Animatronic-Runtime?style=plastic&link=https://github.com/FlooferLand/Animatronic-Runtime)
 
 _The modern home of computer animated animatronic simulations_
 
