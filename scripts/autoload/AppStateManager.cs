@@ -8,8 +8,7 @@ public partial class AppStateManager : Node {
 		EngineSettings.LoadAll();
 		
 		// DEBUG
-		// Log.FatalError("ohh ye this e fuckin erroh innit thislcrashtegame innit cont believ it ahbsolu'ely splendid");
-		OS.Crash("idk");
+		// OS.Crash("ohh ye this e fuckin erroh innit thislcrashtegame innit cont believ it ahbsolu'ely splendid");
 	}
 
 	public override void _Notification(int what) {

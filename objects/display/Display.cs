@@ -8,11 +8,11 @@ using System.Collections.Generic;
 [Tool]
 public partial class Display : Node3D, IBaseInteractable, ILookDetector {
 	// Nodes
-	private SubViewport viewport;
-	private MeshInstance3D mesh;
-	private Area3D interactionArea;
-	private CollisionShape3D interactionAreaCollider;
-	private AudioStreamPlayer3D clickPlayer;
+	[GetNode("Viewport")]					private SubViewport viewport;
+	[GetNode("Mesh")]						private MeshInstance3D mesh;
+	[GetNode("InteractionArea")]			private Area3D interactionArea;
+	[GetNode("InteractionArea/Collision")]	private CollisionShape3D interactionAreaCollider;
+	[GetNode("ClickPlayer")]				private AudioStreamPlayer3D clickPlayer;
 	private Control userInterface;
 	private Control UserInterface {
 		get => userInterface;
@@ -131,12 +131,6 @@ public partial class Display : Node3D, IBaseInteractable, ILookDetector {
 	
 	// Built-in methods
 	public override void _Ready() {
-		viewport = GetNode<SubViewport>("Viewport");
-		mesh = GetNode<MeshInstance3D>("Mesh");
-		interactionArea = GetNode<Area3D>("InteractionArea");
-		interactionAreaCollider = GetNode<CollisionShape3D>("InteractionArea/Collision");
-		clickPlayer = GetNode<AudioStreamPlayer3D>("ClickPlayer");
-		
 		// Getting the UI node
 		if (GetChildOrNull<Control>(GetChildCount() - 1) is {} child)
 			UserInterface = child;
@@ -162,8 +156,7 @@ public partial class Display : Node3D, IBaseInteractable, ILookDetector {
 	public override string[] _GetConfigurationWarnings() {
 		var warnings = new List<string>();
 		
-		// if (GetChildOrNull<Control>(GetChildCount()-1) == null)
-		if (UserInterface == null)
+		if (GetChildOrNull<Control>(GetChildCount()-1) == null)
 			warnings.Add("Must have a UI node as a child");
 		
 		return warnings.ToArray();

@@ -8,4 +8,8 @@ sky_material = SubResource("ProceduralSkyMaterial_eyte3")
 [resource]
 background_mode = 2
 sky = SubResource("Sky_8bgab")
+ambient_light_sky_contribution = 0.3
+ambient_light_energy = 0.5
 tonemap_mode = 3
+glow_enabled = true
+glow_strength = 0.85

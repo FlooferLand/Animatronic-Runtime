@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://chtqqsexsffsr"]
 
 [ext_resource type="Script" path="res://objects/display/Display.cs" id="1_rli8t"]
-[ext_resource type="AudioStream" uid="uid://dim3f56745h0v" path="res://sound/ui/click.wav" id="2_77ja0"]
+[ext_resource type="AudioStream" uid="uid://dim3f56745h0v" path="res://audio/ui/click.wav" id="2_77ja0"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_2sjfo"]
 

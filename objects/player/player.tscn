@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://belcb11csfxpb"]
+
+[ext_resource type="Script" path="res://objects/player/Player.cs" id="1_lh2hy"]
+[ext_resource type="Texture2D" uid="uid://dgawnlk0760b7" path="res://ui/crosshair.png" id="2_5cx18"]
+[ext_resource type="Script" path="res://objects/player/BobManager.cs" id="2_dud0d"]
+[ext_resource type="Script" path="res://objects/player/FootstepManager.cs" id="3_8afhj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ytv6l"]
+radius = 0.3
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_lh2hy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ytv6l")
+
+[node name="Head" type="Node3D" parent="." node_paths=PackedStringArray("footstepManager")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+script = ExtResource("2_dud0d")
+footstepManager = NodePath("../FootstepManager")
+
+[node name="Camera" type="Camera3D" parent="Head"]
+doppler_tracking = 1
+current = true
+
+[node name="Canvas" type="CanvasLayer" parent="Head/Camera"]
+
+[node name="UserInterface" type="Control" parent="Head/Camera/Canvas"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Head/Camera/Canvas/UserInterface"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5cx18")
+
+[node name="InteractRay" type="RayCast3D" parent="Head"]
+target_position = Vector3(0, 0, -5)
+collide_with_areas = true
+
+[node name="Flashlight" type="SpotLight3D" parent="Head"]
+light_energy = 2.0
+spot_range = 10.0
+spot_angle = 35.0
+
+[node name="FootstepManager" type="Node" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("3_8afhj")
+player = NodePath("..")
+VolumeBoost = 1.0
+
+[node name="Audio" type="AudioStreamPlayer" parent="FootstepManager"]
+bus = &"PlayerSteps"
+
+[node name="Timer" type="Timer" parent="FootstepManager"]

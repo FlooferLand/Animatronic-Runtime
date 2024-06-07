@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ct5xed7cpld63"]
+[gd_scene load_steps=6 format=3 uid="uid://ct5xed7cpld63"]
 
-[ext_resource type="Material" uid="uid://dcmmxy1b8kd6q" path="res://materials/floor_tiles/floor_tiles.material" id="2_gm5ot"]
+[ext_resource type="PackedScene" uid="uid://belcb11csfxpb" path="res://objects/player/player.tscn" id="2_2ex8u"]
+[ext_resource type="Material" uid="uid://bm0mj0k8sd6xf" path="res://materials/floor_tiles/floor_tiles.material" id="2_gm5ot"]
 [ext_resource type="Environment" uid="uid://8a55eyyvo266" path="res://world_env.tres" id="3_8hrva"]
+[ext_resource type="PackedScene" uid="uid://chtqqsexsffsr" path="res://objects/display/Display.tscn" id="4_08h3s"]
+[ext_resource type="PackedScene" uid="uid://bc6p4mgsei7kd" path="res://objects/display/TestUI.tscn" id="5_h8pbb"]
 
 [node name="Demo" type="Node3D"]
 
@@ -11,13 +14,17 @@ material_override = ExtResource("2_gm5ot")
 use_collision = true
 size = Vector3(100, 0.2, 100)
 
+[node name="Player" parent="." instance=ExtResource("2_2ex8u")]
+
 [node name="Graphics" type="Node" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Graphics"]
 environment = ExtResource("3_8hrva")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Graphics"]
-light_energy = 4.0
+light_energy = 2.0
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10214, 0)
+[node name="Display" parent="." instance=ExtResource("4_08h3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26799, 1.31341, -5.6529)
+
+[node name="TestUI" parent="Display" instance=ExtResource("5_h8pbb")]

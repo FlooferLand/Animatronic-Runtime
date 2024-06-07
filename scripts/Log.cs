@@ -1,6 +1,5 @@
 namespace Project;
 using Godot;
-using System;
 
 public static class Log {
 	public static void Debug(params object[] what) {
