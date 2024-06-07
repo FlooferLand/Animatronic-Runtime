@@ -4,12 +4,12 @@ using Godot;
 // TODO: Add graphical and brightness stuff
 
 public class Display {
-	public Vector2I Resolution = DisplayServer.ScreenGetSize();
-	
+	public Vector2I Resolution => DisplayServer.ScreenGetSize();
+
 	[Export(PropertyHint.Range, hintString:"20,999,1")]
-	public float RefreshRate = DisplayServer.ScreenGetRefreshRate();
+	public float RefreshRate => DisplayServer.ScreenGetRefreshRate();
 	
-	public bool VSync = true;
+	public DisplayServer.VSyncMode VSync => DisplayServer.WindowGetVsyncMode();
 }
 
 public class Graphics {}

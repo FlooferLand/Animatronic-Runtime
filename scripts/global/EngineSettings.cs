@@ -5,14 +5,13 @@ using Godot;
 
 /// Class for storing things like the game settings
 public static class EngineSettings {
-	private const string Path = "user://settings.dict";
 	public static EngineSettingsData Data = new();
 
 	/// Loading all the settings
 	public static void LoadAll() {
 		try {
-			if (FileAccess.FileExists(Path)) {
-				FileAccess file = FileAccess.Open(Path, FileAccess.ModeFlags.Read);
+			if (FileAccess.FileExists(Paths.SettingsPath)) {
+				FileAccess file = FileAccess.Open(Paths.SettingsPath, FileAccess.ModeFlags.Read);
 				Data = JsonConvert.DeserializeObject<EngineSettingsData>(file.GetAsText());
 				file.Close();
 			} else {
@@ -35,7 +34,7 @@ public static class EngineSettings {
 		};
 		
 		// Writing data to the settings file
-		FileAccess file = FileAccess.Open(Path, FileAccess.ModeFlags.Write);
+		FileAccess file = FileAccess.Open(Paths.SettingsPath, FileAccess.ModeFlags.Write);
 		if (file != null) {
 			file.StoreString(JsonConvert.SerializeObject(Data, settings));
 			file.Close();
