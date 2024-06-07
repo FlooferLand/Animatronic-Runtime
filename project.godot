@@ -42,7 +42,6 @@ project/assembly_name="Animatronic Runtime"
 [gui]
 
 theme/custom="res://ui/ui.theme"
-theme/custom_font="res://ui/fonts/normal_font.tres"
 
 [input]
 
