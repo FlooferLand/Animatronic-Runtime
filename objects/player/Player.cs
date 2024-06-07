@@ -12,6 +12,10 @@ public partial class Player : CharacterBody3D {
 	[GetNode("Head/InteractRay")]	private RayCast3D interactRay;
 	[GetNode("Head/Flashlight")]	private SpotLight3D flashlight;
 	[GetNode("FootstepManager")]	private FootstepManager footstepManager;
+	
+	// UI
+	[GetNode("{camera}/Canvas/PlayerHUD")]	private Control playerHud;
+	[GetNode("{playerHud}/PauseMenu")]		private PauseMenu pauseMenu;
 	#endregion
 	
 	#region Settings
@@ -62,7 +66,7 @@ public partial class Player : CharacterBody3D {
 	public override void _Process(double delta) {
 		#region Pause menu stuff
 		if (Input.IsActionJustPressed("escape")) {
-			// pauseMenu.Toggle();
+			pauseMenu.Toggle();
 		}
 		#endregion
 		

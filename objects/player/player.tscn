@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://belcb11csfxpb"]
 
 [ext_resource type="Script" path="res://objects/player/Player.cs" id="1_lh2hy"]
-[ext_resource type="Texture2D" uid="uid://dgawnlk0760b7" path="res://ui/crosshair.png" id="2_5cx18"]
 [ext_resource type="Script" path="res://objects/player/BobManager.cs" id="2_dud0d"]
 [ext_resource type="Script" path="res://objects/player/FootstepManager.cs" id="3_8afhj"]
+[ext_resource type="PackedScene" uid="uid://2jtiy7p2h6dc" path="res://ui/player_hud/player_hud.tscn" id="3_ntpip"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ytv6l"]
 radius = 0.3
@@ -26,29 +26,7 @@ current = true
 
 [node name="Canvas" type="CanvasLayer" parent="Head/Camera"]
 
-[node name="UserInterface" type="Control" parent="Head/Camera/Canvas"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="Head/Camera/Canvas/UserInterface"]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_5cx18")
+[node name="PlayerHUD" parent="Head/Camera/Canvas" instance=ExtResource("3_ntpip")]
 
 [node name="InteractRay" type="RayCast3D" parent="Head"]
 target_position = Vector3(0, 0, -5)

@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://2jtiy7p2h6dc"]
+
+[ext_resource type="Texture2D" uid="uid://dgawnlk0760b7" path="res://ui/player_hud/crosshair.png" id="1_wij2g"]
+[ext_resource type="PackedScene" uid="uid://cfxyqpeiavpqr" path="res://ui/states/settings_menu/settings_menu.tscn" id="2_l1ig4"]
+[ext_resource type="PackedScene" uid="uid://dyxbyww16s0oj" path="res://ui/states/pause_menu/pause_menu.tscn" id="3_668cm"]
+
+[node name="PlayerHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Crosshair" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wij2g")
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_668cm")]
+visible = false
+layout_mode = 1
+offset_right = 55.0
+
+[node name="SettingsMenu" parent="PauseMenu" instance=ExtResource("2_l1ig4")]
+visible = false
+layout_mode = 2
+anchors_preset = 0
