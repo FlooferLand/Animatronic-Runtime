@@ -24,7 +24,7 @@ View the [socials](#Social) section if you want to get news about development or
 
 ## Social
 Feel free to join to see progress! <br/>
-- The Discord server is at https://discord.gg/jveaNwjGmf
+- The Discord server is at https://discord.gg/KAvgnaRn4H
 - The Matrix server is at [#animatronic_runtime:matrix.org](https://matrix.to/#/%23animatronic_runtime:matrix.org) _(its basically a modern IRC channel)_
 
 ## NOTE: This is not a Rockafire Explosion simulator
