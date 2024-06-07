@@ -28,6 +28,16 @@ public class Performance {
 		set => lowPerfMode = value;
 	}
 	private bool lowPerfMode = false;
+
+	public bool UpdateTitle {
+		get => updateTitle;
+		set {
+			updateTitle = value;
+			var window = (Engine.GetMainLoop() as SceneTree)?.Root;
+			if (!updateTitle && window != null) window.SetTitle("Animatronic Runtime"); 
+		}
+	}
+	private bool updateTitle = true;
 }
 
 /// <para>This stores all the editor settings. </para>
