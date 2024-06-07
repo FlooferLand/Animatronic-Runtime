@@ -1,11 +1,16 @@
+![banner](./marketing/banner.webp)
+
 # Animatronic Runtime
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/FlooferLand/Animatronic-Runtime?style=flat-square&color=brightgreen)
+![Lines of code](https://img.shields.io/tokei/lines/github/FlooferLand/Animatronic-Runtime?style=flat-square)
+![Created at](https://img.shields.io/github/created-at/FlooferLand/Animatronic-Runtime)
 
 _The modern home of computer animated animatronic simulations_
 
 FlooferLand's Animatronic Runtime is an simulation and animation engine for animatronic shows the like of [The Rockafire Explosion](https://www.youtube.com/watch?v=8SeSavNd9_c&list=PLB8A625C54121DA04)
 This project will let you create and animate shows without investing hundreds of dollars making a real animatronic, as well as letting you animate real world animatronics by exporting a selection of shows to an Arduino-compatible board.
 
-### ⚠️ This project is in VERY early development
+### `⚠️ This project is in VERY early development ⚠️`
 View the [socials](#Social) section if you want to get news about development or further info about this project
 
 ## Planned features
