@@ -11,7 +11,7 @@ FlooferLand's Animatronic Runtime is an simulation and animation engine for anim
 This project will let you create and animate shows without investing hundreds of dollars making a real animatronic, as well as letting you animate real world animatronics by exporting a selection of shows to an Arduino-compatible board.
 
 ### `⚠️ This project is in VERY early development ⚠️`
-View the [socials](#Social) section if you want to get news about development or further info about this project
+View the [social](#Social) section if you want to get news about development or further info about this project
 
 ## Planned features
 - Create and watch shows
@@ -30,7 +30,7 @@ View the [socials](#Social) section if you want to get news about development or
 ## Social
 Feel free to join to see progress! <br/>
 - The Discord server is at https://discord.gg/KAvgnaRn4H
-- The Matrix server is at [#animatronic_runtime:matrix.org](https://matrix.to/#/%23animatronic_runtime:matrix.org) _(its basically a modern IRC channel)_
+- The Matrix space is at [#animatronic_runtime:matrix.org](https://matrix.to/#/%23animatronic_runtime:matrix.org) _(basically a modern IRC channel)_
 
 ## NOTE: This is not a Rockafire Explosion simulator
 Rockafire Explosion characters will not be included _(unless Aaron specifically gives this project permission)_, and CEC characters won't be included.
