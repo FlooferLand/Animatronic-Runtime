@@ -1,4 +1,6 @@
-﻿namespace Project.Settings;
+﻿using System.Collections.Generic;
+
+namespace Project.Settings;
 using Godot;
 
 // TODO: Add graphical and brightness stuff
@@ -19,4 +21,11 @@ public class Graphics {}
 public class EngineSettingsData {
 	public Display Display = new();
 	public Graphics Graphics = new();
+
+	// TODO: Add several performance modes
+	public bool LowPerformanceMode {
+		get => lowPerfMode || Utils.IsHomebrew();
+		set => lowPerfMode = value;
+	}
+	private bool lowPerfMode = false;
 }

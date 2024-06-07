@@ -90,6 +90,7 @@ public partial class FootstepManager : Node {
 		
         // Playing the audio
         audio.Stream = GetFootstepSound();
+        audio.PitchScale = Utils.Random.RandfRange(0.8f, 1.2f);
         audio.Play();
     }
 

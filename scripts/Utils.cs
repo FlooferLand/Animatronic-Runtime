@@ -72,4 +72,26 @@ public static class Utils {
         );
         return (T) instance;
     }
+
+    #region Old consoles and mobile
+    public static bool IsWiiU() {
+        return OS.GetName() == "wiiu";
+    }
+    public static bool Is3ds() {
+        return OS.GetName() == "3ds";
+    }
+    
+    /// Whenever we're running on a very old console
+    public static bool IsHomebrew() {
+        return IsWiiU() || Is3ds();
+    }
+    /// Whenever we're running on a very old console that has touch/stylus support
+    public static bool IsTouchCapableHomebrew() {
+        return IsWiiU() || Is3ds();
+    }
+
+    public static bool HasTouchscreen() {
+        return IsTouchCapableHomebrew() || DisplayServer.IsTouchscreenAvailable();
+    }
+    #endregion
 }

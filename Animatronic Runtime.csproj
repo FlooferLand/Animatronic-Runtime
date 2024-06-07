@@ -7,13 +7,13 @@
     <RootNamespace>AnimatronicRuntime</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="script_templates/**/*.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ui\" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="GodotGetNode" Version="0.1.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="script_templates\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="script_templates\**" />
   </ItemGroup>
 </Project>

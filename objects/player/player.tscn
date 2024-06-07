@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://belcb11csfxpb"]
+[gd_scene load_steps=7 format=3 uid="uid://belcb11csfxpb"]
 
-[ext_resource type="Script" path="res://objects/player/Player.cs" id="1_lh2hy"]
-[ext_resource type="Script" path="res://objects/player/BobManager.cs" id="2_dud0d"]
-[ext_resource type="Script" path="res://objects/player/FootstepManager.cs" id="3_8afhj"]
+[ext_resource type="Script" path="res://objects/player/scripts/Player.cs" id="1_lh2hy"]
+[ext_resource type="Script" path="res://objects/player/scripts/BobManager.cs" id="2_dud0d"]
+[ext_resource type="Script" path="res://objects/player/scripts/FootstepManager.cs" id="3_8afhj"]
 [ext_resource type="PackedScene" uid="uid://2jtiy7p2h6dc" path="res://ui/player_hud/player_hud.tscn" id="3_ntpip"]
+[ext_resource type="PackedScene" uid="uid://bhx3aljnitljj" path="res://objects/player/flashlight.tscn" id="4_tygtb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ytv6l"]
 radius = 0.3
@@ -32,10 +33,7 @@ current = true
 target_position = Vector3(0, 0, -5)
 collide_with_areas = true
 
-[node name="Flashlight" type="SpotLight3D" parent="Head"]
-light_energy = 2.0
-spot_range = 10.0
-spot_angle = 35.0
+[node name="Flashlight" parent="Head" instance=ExtResource("4_tygtb")]
 
 [node name="FootstepManager" type="Node" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("3_8afhj")

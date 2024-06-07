@@ -10,7 +10,7 @@ public partial class Player : CharacterBody3D {
 	[GetNode("Head")]				private Node3D head;
 	[GetNode("Head/Camera")]		private Camera3D camera;
 	[GetNode("Head/InteractRay")]	private RayCast3D interactRay;
-	[GetNode("Head/Flashlight")]	private SpotLight3D flashlight;
+	[GetNode("Head/Flashlight")]	private Flashlight flashlight;
 	[GetNode("FootstepManager")]	private FootstepManager footstepManager;
 	
 	// UI
@@ -64,19 +64,13 @@ public partial class Player : CharacterBody3D {
 	}
 
 	public override void _Process(double delta) {
-		#region Pause menu stuff
-		if (Input.IsActionJustPressed("escape")) {
-			pauseMenu.Toggle();
-		}
-		#endregion
-		
 		// Return if the player isn't focusing on the window!
 		if (Input.MouseMode != Input.MouseModeEnum.Captured)
 			return;
 		
 		#region Flashlight + Camera rotation
 		if (Input.IsActionJustPressed("toggle_flashlight"))
-			flashlight.Visible = !flashlight.Visible;
+			flashlight.Toggle();
 		#endregion
 		
 		#region Look detection + Interaction
@@ -134,6 +128,10 @@ public partial class Player : CharacterBody3D {
 	
 	// Player movement & etc
 	public override void _PhysicsProcess(double delta) {
+		// Return if the player isn't focusing on the window!
+		if (Input.MouseMode != Input.MouseModeEnum.Captured)
+			return;
+		
 		Vector2 moveDir = Input.GetVector("walk_left", "walk_right", "walk_forward", "walk_backward");
 		Vector3 forward = head.Transform.Basis * new Vector3(moveDir.X, 0, moveDir.Y);
 		Vector3 walkDir = new Vector3(forward.X, 0, forward.Z).Normalized();
