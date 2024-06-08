@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmlg1nyp0o0ff"]
+
+[ext_resource type="PackedScene" uid="uid://dpnu56fxlamje" path="res://ui/states/settings_menu/widgets/base_widget.tscn" id="1_f3nmk"]
+[ext_resource type="Script" path="res://ui/states/settings_menu/widgets/scripts/SettingsTwoNumWidget.cs" id="2_eslnl"]
+
+[node name="TwoNumWidget" instance=ExtResource("1_f3nmk")]
+script = ExtResource("2_eslnl")
+
+[node name="Label" parent="." index="0"]
+text = "Placeholder"
+
+[node name="Container" type="HBoxContainer" parent="CenterContainer" index="0"]
+layout_mode = 2
+
+[node name="NumOne" type="SpinBox" parent="CenterContainer/Container" index="0"]
+layout_mode = 2
+allow_greater = true
+update_on_text_changed = true
+select_all_on_focus = true
+
+[node name="NumTwo" type="SpinBox" parent="CenterContainer/Container" index="1"]
+layout_mode = 2
+allow_greater = true
+update_on_text_changed = true
+select_all_on_focus = true

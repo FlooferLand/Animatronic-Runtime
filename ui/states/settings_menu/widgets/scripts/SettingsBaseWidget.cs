@@ -5,9 +5,10 @@ using Godot;
 public partial class SettingsBaseWidget : HSplitContainer {
 	// Nodes
 	[GetNode("Label")] private Label widgetLabelControl;
+	[GetNode("CenterContainer")] protected Control WidgetControl;
 	
 	// Settings
-	private string widgetText;
+	private string widgetText = "Placeholder";
 	[Export] public string WidgetText {
 		get => widgetText;
 		set {

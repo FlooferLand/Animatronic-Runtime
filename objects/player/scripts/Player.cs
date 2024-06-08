@@ -74,42 +74,42 @@ public partial class Player : CharacterBody3D {
 		#endregion
 		
 		#region Look detection + Interaction
-        if (interactRay.GetCollider() is Node collider) {
-	        var obj = collider.GetOwner<Node3D>();
-	        
-	        // Look detection
-	        // TODO: Not fully finished
-	        if (obj is ILookDetector detector) {
-		        detector.LookDetector(true, interactRay);
-		        lastLookedAt ??= detector;  // Assign if null
-		        if (lastLookedAt != detector)
-			        lastLookedAt.LookDetector(false, interactRay);
-	        } else if (lastLookedAt != null) {
-		        lastLookedAt.LookDetector(false, interactRay);
-		        lastLookedAt = null;
-	        }
-	        
-	        // Triggering interaction
-	        // TODO: Make this mess better
-	        if (obj is IBaseInteractable interactable) {
-		        var actions = new List<string> { "interact_primary", "interact_secondary" };
-		        foreach (string action in actions) {
-                    InteractButton button = InteractButton.Primary;
-                    if (action == "interact_secondary")
-	                    button = InteractButton.Secondary;
+		if (interactRay.GetCollider() is Node collider) {
+			var obj = collider.GetOwner<Node3D>();
+			
+			// Look detection
+			// TODO: Not fully finished
+			if (obj is ILookDetector detector) {
+				detector.LookDetector(true, interactRay);
+				lastLookedAt ??= detector;  // Assign if null
+				if (lastLookedAt != detector)
+					lastLookedAt.LookDetector(false, interactRay);
+			} else if (lastLookedAt != null) {
+				lastLookedAt.LookDetector(false, interactRay);
+				lastLookedAt = null;
+			}
+			
+			// Triggering interaction
+			// TODO: Make this mess better
+			if (obj is IBaseInteractable interactable) {
+				var actions = new List<string> { "interact_primary", "interact_secondary" };
+				foreach (string action in actions) {
+					InteractButton button = InteractButton.Primary;
+					if (action == "interact_secondary")
+						button = InteractButton.Secondary;
 
-                    if (Input.IsActionJustPressed(action))
-				        interactable.Interact(interactRay, InteractState.Press, button);
-			        else if (Input.IsActionPressed(action))
-				        interactable.Interact(interactRay, InteractState.Hold, button);
-			        else if (Input.IsActionJustReleased(action))
-				        interactable.Interact(interactRay, InteractState.Release, button);
-		        }
-	        }
-        } else if (lastLookedAt != null) {
-	        lastLookedAt.LookDetector(false, interactRay);
-	        lastLookedAt = null;
-        }
+					if (Input.IsActionJustPressed(action))
+						interactable.Interact(interactRay, InteractState.Press, button);
+					else if (Input.IsActionPressed(action))
+						interactable.Interact(interactRay, InteractState.Hold, button);
+					else if (Input.IsActionJustReleased(action))
+						interactable.Interact(interactRay, InteractState.Release, button);
+				}
+			}
+		} else if (lastLookedAt != null) {
+			lastLookedAt.LookDetector(false, interactRay);
+			lastLookedAt = null;
+		}
 		#endregion
 		
 		#region Footstep sounds

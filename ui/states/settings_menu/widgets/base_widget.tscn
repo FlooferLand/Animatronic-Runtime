@@ -7,5 +7,6 @@ custom_minimum_size = Vector2(512, 64)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 
-[node name="Control" type="Control" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 2
+size_flags_horizontal = 0

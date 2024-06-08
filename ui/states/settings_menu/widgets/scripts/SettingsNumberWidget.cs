@@ -6,8 +6,8 @@ using Godot;
 [Tool]
 public partial class SettingsNumberWidget : SettingsBaseWidget {
 	// Nodes
-	[GetNode("Control/Container/SpinBox")] private SpinBox spinBox;
-	[GetNode("Control/Container/Slider")] private Slider slider;
+	[GetNode("{WidgetControl}/Container/SpinBox")] private SpinBox spinBox;
+	[GetNode("{WidgetControl}/Container/Slider")] private Slider slider;
 	
 	// Signals
 	[Signal] public delegate void ValueChangedEventHandler(float value);
@@ -30,22 +30,36 @@ public partial class SettingsNumberWidget : SettingsBaseWidget {
 		}
 	}
 	
+	// Variables
+	private float value;
+	public float Value {
+		get => value;
+		set {
+			this.value = value;
+			UpdateWidgets();
+		}
+	}
+	
 	public override void _Ready() {
 		base._Ready();
 		UpdateWidgets();
 		
-		if (!Engine.IsEditorHint()) return;
+		if (Engine.IsEditorHint()) return;
 		foreach (var range in new Range[] { spinBox, slider }) {
-			range.ValueChanged += (value) => EmitSignal(nameof(ValueChanged), (float) value);
+			range.ValueChanged += (newValue) => {
+				Value = (float) newValue;
+				UpdateWidgets();
+				EmitSignal(nameof(ValueChanged), Value);
+			};
 		}
 	}
 
 	private void UpdateWidgets() {
-		if (!Engine.IsEditorHint()) return;
 		foreach (var range in new Range[] {spinBox, slider}) {
 			if (range == null) continue;
 			range.MinValue = min;
 			range.MaxValue = max;
+			range.Value = value;
 		}
 	}
 }

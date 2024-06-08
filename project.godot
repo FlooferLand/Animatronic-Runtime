@@ -39,6 +39,10 @@ window/vsync/vsync_mode=0
 
 project/assembly_name="Animatronic Runtime"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/main_editor_plugin/plugin.cfg")
+
 [gui]
 
 theme/custom="res://ui/ui.theme"

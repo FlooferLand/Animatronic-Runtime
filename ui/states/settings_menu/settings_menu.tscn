@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfxyqpeiavpqr"]
+[gd_scene load_steps=4 format=3 uid="uid://cfxyqpeiavpqr"]
 
 [ext_resource type="Script" path="res://ui/states/settings_menu/scripts/SettingsMenu.cs" id="1_527p5"]
-[ext_resource type="PackedScene" uid="uid://340ryx1rccb5" path="res://ui/states/settings_menu/widgets/number_widget.tscn" id="2_omd5v"]
+[ext_resource type="PackedScene" uid="uid://dla16xpwonyhh" path="res://ui/states/settings_menu/widgets/enum_widget.tscn" id="2_rtelv"]
+[ext_resource type="PackedScene" uid="uid://dmlg1nyp0o0ff" path="res://ui/states/settings_menu/widgets/two_num_widget.tscn" id="2_tr5ax"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
@@ -11,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_527p5")
+metadata/_edit_vertical_guides_ = [-136.0]
 
 [node name="Background" type="Panel" parent="."]
 layout_mode = 1
@@ -30,7 +32,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 24
 current_tab = 0
 
-[node name="Margin" type="MarginContainer" parent="Tabs"]
+[node name="Display" type="MarginContainer" parent="Tabs"]
 layout_mode = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 25
@@ -38,10 +40,49 @@ theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 25
 metadata/_tab_index = 0
 
-[node name="List" type="VBoxContainer" parent="Tabs/Margin"]
+[node name="List" type="VBoxContainer" parent="Tabs/Display"]
 layout_mode = 2
 
-[node name="NumberWidget" parent="Tabs/Margin/List" instance=ExtResource("2_omd5v")]
+[node name="Resolution" parent="Tabs/Display/List" instance=ExtResource("2_tr5ax")]
 layout_mode = 2
-Max = 100.0
-WidgetText = "Silly"
+WidgetText = "Resolution"
+
+[node name="VSync" parent="Tabs/Display/List" instance=ExtResource("2_rtelv")]
+layout_mode = 2
+WidgetText = "V-Sync"
+
+[node name="Graphics" type="MarginContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+metadata/_tab_index = 1
+
+[node name="List" type="VBoxContainer" parent="Tabs/Graphics"]
+layout_mode = 2
+
+[node name="CPU" type="MarginContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+metadata/_tab_index = 2
+
+[node name="List" type="VBoxContainer" parent="Tabs/CPU"]
+layout_mode = 2
+
+[node name="Gameplay" type="MarginContainer" parent="Tabs"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+metadata/_tab_index = 3
+
+[node name="List" type="VBoxContainer" parent="Tabs/Gameplay"]
+layout_mode = 2
