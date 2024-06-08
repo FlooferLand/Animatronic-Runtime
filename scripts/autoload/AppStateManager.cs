@@ -29,7 +29,8 @@ public partial class AppStateManager : Node {
 
 	public override void _Process(double delta) {
 		if (EngineSettings.Data.Performance.UpdateTitle) {
-			GetTree().Root.SetTitle($"Animatronic Runtime - {Mathf.RoundToInt(Engine.GetFramesPerSecond())} FPS");
+			int fps = Mathf.RoundToInt(Engine.GetFramesPerSecond());
+			GetTree().Root.SetTitle($"Animatronic Runtime - FPS: {fps} - LOW_SPEC_FPS: {Mathf.RoundToInt(fps * 0.09)}");
 		}
 	}
 }
