@@ -26,12 +26,12 @@ public partial class SettingsTwoNumWidget : SettingsBaseWidget {
 		
 		// Connecting signals
 		if (Engine.IsEditorHint()) return;
-		numOne.ValueChanged += (newValue) => {
+		numOne.ValueChanged += newValue => {
 			Value = Value.WithX(newValue);
 			UpdateWidgets();
 			EmitSignal(nameof(ValueChanged), Value);
 		};
-		numTwo.ValueChanged += (newValue) => {
+		numTwo.ValueChanged += newValue => {
 			Value = Value.WithY(newValue);
 			UpdateWidgets();
 			EmitSignal(nameof(ValueChanged), Value);

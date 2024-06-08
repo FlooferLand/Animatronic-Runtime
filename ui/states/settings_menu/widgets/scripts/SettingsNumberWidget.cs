@@ -13,7 +13,7 @@ public partial class SettingsNumberWidget : SettingsBaseWidget {
 	[Signal] public delegate void ValueChangedEventHandler(float value);
 	
 	// Settings
-	private float min = 0.0f;
+	private float min = 0f;
 	[Export] public float Min {
 		get => min;
 		set {
@@ -47,7 +47,7 @@ public partial class SettingsNumberWidget : SettingsBaseWidget {
 		// Connecting signals
 		if (Engine.IsEditorHint()) return;
 		foreach (var range in new Range[] { spinBox, slider }) {
-			range.ValueChanged += (newValue) => {
+			range.ValueChanged += newValue => {
 				Value = (float) newValue;
 				UpdateWidgets();
 				EmitSignal(nameof(ValueChanged), Value);

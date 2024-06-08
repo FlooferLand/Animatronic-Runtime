@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
+using Godot.Collections;
 
 namespace Project;
 using Godot;
@@ -15,8 +15,8 @@ public partial class SettingsEnumWidget : SettingsBaseWidget {
     
     // Variables
     private Type enumType;
-    public Dictionary<int, Enum> EnumValues = new();
-    private Dictionary<Enum, int> enumIndexes = new();
+    public System.Collections.Generic.Dictionary<int, Enum> EnumValues = new();
+    private System.Collections.Generic.Dictionary<Enum, int> enumIndexes = new();
     private int selected;
     public int Value {
 	    get => selected;
@@ -32,7 +32,7 @@ public partial class SettingsEnumWidget : SettingsBaseWidget {
     	
 	    // Connecting signals
     	if (Engine.IsEditorHint()) return;
-    	dropdown.ItemSelected += (itemId) => {
+    	dropdown.ItemSelected += itemId => {
 		    if (EnumValues.Count == 0) {
 			    Value = (int) itemId;
 		    } else {
@@ -97,10 +97,10 @@ public partial class SettingsEnumWidgetInspectorPlugin : EditorInspectorPlugin {
 		showContents.Text = "Show assigned values";
 		showContents.ToggleMode = true;
 		showContents.ButtonPressed = false;
-		showContents.Toggled += (enabled) => {
+		showContents.Toggled += enabled => {
 			if (enabled) {
-				var data = new Godot.Collections.Array<string>(
-					widget.EnumValues.Values.Select((s) => s.ToString()).ToArray()
+				var data = new Array<string>(
+					widget.EnumValues.Values.Select(s => s.ToString()).ToArray()
 				);
 
 				for (int i = 0; i < data.Count; i++) {
