@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dpnu56fxlamje"]
+
+[node name="BaseWidget" type="HSplitContainer"]
+custom_minimum_size = Vector2(512, 64)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2

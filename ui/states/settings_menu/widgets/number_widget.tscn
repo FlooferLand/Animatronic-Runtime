@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://340ryx1rccb5"]
+
+[ext_resource type="PackedScene" uid="uid://dpnu56fxlamje" path="res://ui/states/settings_menu/widgets/base_widget.tscn" id="1_v6fm2"]
+[ext_resource type="Script" path="res://ui/states/settings_menu/widgets/scripts/SettingsNumberWidget.cs" id="2_225vk"]
+
+[node name="NumberWidget" instance=ExtResource("1_v6fm2")]
+script = ExtResource("2_225vk")
+Max = 0.0
+
+[node name="Container" type="VBoxContainer" parent="Control" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpinBox" type="SpinBox" parent="Control/Container" index="0"]
+layout_mode = 2
+max_value = 0.0
+
+[node name="Slider" type="HSlider" parent="Control/Container" index="1"]
+layout_mode = 2
+max_value = 0.0

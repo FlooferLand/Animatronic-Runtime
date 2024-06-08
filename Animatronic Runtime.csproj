@@ -12,8 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="script_templates\**" />
+    <Compile Remove="ui\states\settings_menu\scripts\OLD\**" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="script_templates\**" />
+    <EmbeddedResource Remove="ui\states\settings_menu\scripts\OLD\**" />
   </ItemGroup>
 </Project>

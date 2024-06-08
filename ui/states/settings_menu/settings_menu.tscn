@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfxyqpeiavpqr"]
+[gd_scene load_steps=3 format=3 uid="uid://cfxyqpeiavpqr"]
 
 [ext_resource type="Script" path="res://ui/states/settings_menu/scripts/SettingsMenu.cs" id="1_527p5"]
+[ext_resource type="PackedScene" uid="uid://340ryx1rccb5" path="res://ui/states/settings_menu/widgets/number_widget.tscn" id="2_omd5v"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
@@ -27,3 +28,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 24
+current_tab = 0
+
+[node name="Margin" type="MarginContainer" parent="Tabs"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+metadata/_tab_index = 0
+
+[node name="List" type="VBoxContainer" parent="Tabs/Margin"]
+layout_mode = 2
+
+[node name="NumberWidget" parent="Tabs/Margin/List" instance=ExtResource("2_omd5v")]
+layout_mode = 2
+Max = 100.0
+WidgetText = "Silly"
