@@ -24,6 +24,7 @@ public partial class SettingsTwoNumWidget : SettingsBaseWidget {
 		base._Ready();
 		UpdateWidgets();
 		
+		// Connecting signals
 		if (Engine.IsEditorHint()) return;
 		numOne.ValueChanged += (newValue) => {
 			Value = Value.WithX(newValue);
@@ -38,7 +39,9 @@ public partial class SettingsTwoNumWidget : SettingsBaseWidget {
 	}
 
 	private void UpdateWidgets() {
-		numOne.Value = Value.X;
-		numTwo.Value = Value.Y;
+		if (numOne != null && numTwo != null) {
+			numOne.Value = Value.X;
+			numTwo.Value = Value.Y;
+		}
 	}
 }

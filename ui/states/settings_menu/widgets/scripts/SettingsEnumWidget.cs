@@ -1,4 +1,3 @@
-#nullable enable
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +14,7 @@ public partial class SettingsEnumWidget : SettingsBaseWidget {
     [Signal] public delegate void ValueChangedEventHandler(int value);
     
     // Variables
-    private Type? enumType = null;
+    private Type enumType;
     public Dictionary<int, Enum> EnumValues = new();
     private Dictionary<Enum, int> enumIndexes = new();
     private int selected;
@@ -31,6 +30,7 @@ public partial class SettingsEnumWidget : SettingsBaseWidget {
     	base._Ready();
     	UpdateWidgets();
     	
+	    // Connecting signals
     	if (Engine.IsEditorHint()) return;
     	dropdown.ItemSelected += (itemId) => {
 		    if (EnumValues.Count == 0) {
@@ -44,7 +44,7 @@ public partial class SettingsEnumWidget : SettingsBaseWidget {
     }
 
     private void UpdateWidgets() {
-	    if (enumType == null) return;
+	    if (enumType == null || dropdown == null) return;
 	    
 	    dropdown.Selected = selected;  // TODO: update this
     }
@@ -58,12 +58,12 @@ public partial class SettingsEnumWidget : SettingsBaseWidget {
 	    var values = enumType.GetEnumValues();
 
 	    for (int i = 0; i < values.Length; i++) {
-		    object? value = values.GetValue(i);
+		    object value = values.GetValue(i);
 		    if (value is not Enum enumValue) continue;
 		    
 		    EnumValues.Add(i, enumValue);
 		    enumIndexes.Add(enumValue, i);
-		    dropdown.AddItem(enumValue.ToString(), id: i);
+		    dropdown?.AddItem(enumValue.ToString(), id: i);
 	    }
     }
 

@@ -44,6 +44,7 @@ public partial class SettingsNumberWidget : SettingsBaseWidget {
 		base._Ready();
 		UpdateWidgets();
 		
+		// Connecting signals
 		if (Engine.IsEditorHint()) return;
 		foreach (var range in new Range[] { spinBox, slider }) {
 			range.ValueChanged += (newValue) => {
