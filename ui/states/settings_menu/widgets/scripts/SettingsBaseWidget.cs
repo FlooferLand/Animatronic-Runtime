@@ -8,16 +8,18 @@ public partial class SettingsBaseWidget : HSplitContainer {
 	[GetNode("CenterContainer")] protected Control WidgetControl;
 	
 	// Settings
-	private string widgetText = "Placeholder";
-	[Export] public string WidgetText {
-		get => widgetText;
+	private string widgetName = "Placeholder";
+	[Export] public string WidgetName {
+		get => widgetName;
 		set {
-			widgetText = value;
-			if (widgetLabelControl != null) widgetLabelControl.Text = value;
+			// if (!Engine.IsEditorHint()) return;  // This line stops the widget name from showing.. for some reason..
+			widgetName = value;
+			if (widgetLabelControl != null)
+				widgetLabelControl.Text = value;
 		}
 	}
 	
 	public override void _Ready() {
-		if (Engine.IsEditorHint()) widgetLabelControl.Text = widgetText;
+		widgetLabelControl.Text = widgetName;
 	}
 }

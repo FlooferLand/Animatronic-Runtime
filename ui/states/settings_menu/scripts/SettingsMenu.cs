@@ -11,19 +11,34 @@ public partial class SettingsMenu : Control {
     #endregion
     
     #region Widgets
-    [GetNode($"{{{nameof(displayTab)}}}/Resolution")]
-    private SettingsTwoNumWidget resolutionWidget;
-    [GetNode($"{{{nameof(displayTab)}}}/VSync")]
-    private SettingsEnumWidget vsyncWidget;
+    [GetNode($"{{{nameof(displayTab)}}}/Resolution")]   private SettingsTwoNumWidget resolutionWidget;
+    [GetNode($"{{{nameof(displayTab)}}}/FpsCap")]       private SettingsNumberWidget fpsCapWidget;
+    [GetNode($"{{{nameof(displayTab)}}}/VSync")]        private SettingsEnumWidget vsyncWidget;
     #endregion
 
+    // TODO: Switch the settings to be made at compile-time only (a pain to do because Godot's Tool system sucks)
+    
     public override void _Ready() {
-        if (!Engine.IsEditorHint()) return;
-        
-        // Inits
-        vsyncWidget.Init<DisplayServer.VSyncMode>();
-        
-        // Setting the default values
+        // V-Sync
+        vsyncWidget.Init<DisplayServer.VSyncMode>(value => {
+            EngineSettings.Data.Display.VSync = value;
+        });
         vsyncWidget.SetValueEnum(EngineSettings.Data.Display.VSync);
+        
+        // FPS cap
+        fpsCapWidget.ValueChanged += (value, isMin, isMax) => {
+            int val;
+            if (isMin || isMax) {
+                val = 0;
+                // ReSharper disable once StringLiteralTypo
+                fpsCapWidget.StringValueOverride = "MAXIMUM FPS WOAAAOOOWW";
+                Engine.SetMaxFps(0);
+            } else {
+                val = (int) value;
+                fpsCapWidget.StringValueOverride = null;
+                Engine.SetMaxFps(val);
+            }
+            EngineSettings.Data.Display.FramerateCap = val;
+        };
     }
 }

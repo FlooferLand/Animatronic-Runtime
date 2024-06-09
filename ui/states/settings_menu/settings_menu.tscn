@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfxyqpeiavpqr"]
+[gd_scene load_steps=5 format=3 uid="uid://cfxyqpeiavpqr"]
 
 [ext_resource type="Script" path="res://ui/states/settings_menu/scripts/SettingsMenu.cs" id="1_527p5"]
 [ext_resource type="PackedScene" uid="uid://dla16xpwonyhh" path="res://ui/states/settings_menu/widgets/enum_widget.tscn" id="2_rtelv"]
 [ext_resource type="PackedScene" uid="uid://dmlg1nyp0o0ff" path="res://ui/states/settings_menu/widgets/two_num_widget.tscn" id="2_tr5ax"]
+[ext_resource type="PackedScene" uid="uid://340ryx1rccb5" path="res://ui/states/settings_menu/widgets/number_widget.tscn" id="3_7687f"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
@@ -13,6 +14,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_527p5")
 metadata/_edit_vertical_guides_ = [-136.0]
+
+[node name="READ BEFORE MODIFYING" type="Node" parent="."]
+editor_description = "The content of Tabs is proceudrally generated!
+Manual moficiations won't work. Modify the code not the scene!"
 
 [node name="Background" type="Panel" parent="."]
 layout_mode = 1
@@ -45,11 +50,16 @@ layout_mode = 2
 
 [node name="Resolution" parent="Tabs/Display/List" instance=ExtResource("2_tr5ax")]
 layout_mode = 2
-WidgetText = "Resolution"
+WidgetName = "Resolution"
+
+[node name="FpsCap" parent="Tabs/Display/List" instance=ExtResource("3_7687f")]
+layout_mode = 2
+Max = 500.0
+WidgetName = "FPS cap"
 
 [node name="VSync" parent="Tabs/Display/List" instance=ExtResource("2_rtelv")]
 layout_mode = 2
-WidgetText = "V-Sync"
+WidgetName = "V-Sync"
 
 [node name="Graphics" type="MarginContainer" parent="Tabs"]
 visible = false

@@ -5,25 +5,27 @@ using Godot;
 
 // TODO: Add graphical and brightness stuff
 
+// TODO: Separate data from the logic (already sorta done with FramerateCap)
+//       There needs to be a way to load data with the same code/logic (both SettingsMenu and EngineSettings sharing stuff)
+
 public class Display {
 	// Backing fields
-	private int framerateCap = 120;
+	private DisplayServer.VSyncMode vsync = DisplayServer.WindowGetVsyncMode();
 	
 	// Resolution; Defaults to the screen resolution
-	public Vector2I Resolution => DisplayServer.ScreenGetSize();
+	public Vector2I Resolution = DisplayServer.ScreenGetSize();
 
 	// Framerate limiter, for battery-saving reasons
-	[Export(PropertyHint.Range, hintString: "30,250,10")]
-	public int FramerateCap {
-		get => framerateCap;
-		set {
-			framerateCap = value;
-			Engine.SetMaxFps(framerateCap);
-		}
-	}
+	public int FramerateCap = 300;
 
 	/// Nuh uhh
-	public DisplayServer.VSyncMode VSync => DisplayServer.WindowGetVsyncMode();
+	public DisplayServer.VSyncMode VSync {
+		get => vsync;
+		set {
+			vsync = value;
+			DisplayServer.WindowSetVsyncMode(value);
+		}
+	}
 }
 
 public class Graphics {
@@ -36,6 +38,7 @@ public class Performance {
 	private bool updateTitle = true;
 
 	/// Property for LowPerformanceMode
+	/// TODO: Add more variety; make it so the user can enable harsh performance optimizations only for some features
 	public bool LowPerformanceMode {
 		get => lowPerfMode || Utils.IsHomebrew();
 		set => lowPerfMode = value;
