@@ -32,6 +32,22 @@ public partial class SettingsNumberWidget : SettingsBaseWidget {
 			UpdateWidgets();
 		}
 	}
+	private float step = 0.1f;
+	[Export] public float Step {
+		get => step;
+		set {
+			step = value;
+			UpdateWidgets();
+		}
+	}
+	private string postfix = "";
+	[Export] public string Postfix {
+		get => postfix;
+		set {
+			postfix = value;
+			UpdateWidgets();
+		}
+	}
 	
 	// Variables
 	private float value;
@@ -68,8 +84,10 @@ public partial class SettingsNumberWidget : SettingsBaseWidget {
 			if (range == null) continue;
 			range.MinValue = min;
 			range.MaxValue = max;
+			range.Step = step;
 			range.Value = value;
 		}
+		if (spinBox != null) spinBox.Suffix = postfix;
 
 		if (tabber != null) {
 			if (StringValueOverride == null) {

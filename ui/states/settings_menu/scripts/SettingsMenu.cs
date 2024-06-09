@@ -14,9 +14,13 @@ public partial class SettingsMenu : Control {
     [GetNode($"{{{nameof(displayTab)}}}/Resolution")]   private SettingsTwoNumWidget resolutionWidget;
     [GetNode($"{{{nameof(displayTab)}}}/FpsCap")]       private SettingsNumberWidget fpsCapWidget;
     [GetNode($"{{{nameof(displayTab)}}}/VSync")]        private SettingsEnumWidget vsyncWidget;
+    
+    [GetNode($"{{{nameof(graphicsTab)}}}/LodThreshold")] private SettingsNumberWidget lodThresholdWidget;
     #endregion
 
     // TODO: Switch the settings to be made at compile-time only (a pain to do because Godot's Tool system sucks)
+    
+    // TODO: Switch the settings to be completely made through code, because Godot is shit and keeps resetting my nodes
     
     public override void _Ready() {
         // V-Sync
@@ -26,6 +30,7 @@ public partial class SettingsMenu : Control {
         vsyncWidget.SetValueEnum(EngineSettings.Data.Display.VSync);
         
         // FPS cap
+        fpsCapWidget.Value = EngineSettings.Data.Display.FramerateCap;  // TODO: Remove this!! temporary patch
         fpsCapWidget.ValueChanged += (value, isMin, isMax) => {
             int val;
             if (isMin || isMax) {
@@ -39,6 +44,13 @@ public partial class SettingsMenu : Control {
                 Engine.SetMaxFps(val);
             }
             EngineSettings.Data.Display.FramerateCap = val;
+        };
+        
+        // LoD threshold
+        lodThresholdWidget.Value = EngineSettings.Data.Graphics.LodThreshold;  // TODO: Remove this!! temporary patch
+        lodThresholdWidget.ValueChanged += (value, _, _) => {
+            EngineSettings.Data.Graphics.LodThreshold = value;
+            GetTree().Root.MeshLodThreshold = value;
         };
     }
 }

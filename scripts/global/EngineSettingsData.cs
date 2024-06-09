@@ -30,6 +30,9 @@ public class Display {
 
 public class Graphics {
 	// TODO: Add graphical settings
+	
+	// LOD distance tweak
+	public float LodThreshold = 0.8f;
 }
 
 public class Performance {

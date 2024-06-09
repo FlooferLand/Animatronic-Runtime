@@ -110,8 +110,4 @@ fps_test_anim={
 [physics]
 
 3d/run_on_separate_thread=true
-common/physics_ticks_per_second=180
-
-[rendering]
-
-occlusion_culling/use_occlusion_culling=true
+common/physics_ticks_per_second=144
