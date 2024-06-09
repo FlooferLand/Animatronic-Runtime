@@ -81,7 +81,8 @@ public partial class SettingsEnumWidget : SettingsBaseWidget {
     }
 }
 
-[Tool]
+// TODO: Fix the error about EditorInspectorPlugin not existing
+/*[Tool]
 public partial class SettingsEnumWidgetInspectorPlugin : EditorInspectorPlugin {
 	public override bool _CanHandle(GodotObject obj) {
 		return obj is SettingsEnumWidget;
@@ -119,4 +120,4 @@ public partial class SettingsEnumWidgetInspectorPlugin : EditorInspectorPlugin {
 		AddCustomControl(showContents);
 		AddCustomControl(container);
 	}
-}
+}*/

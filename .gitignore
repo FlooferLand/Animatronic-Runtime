@@ -1,3 +1,6 @@
+# Me specific
+builds/
+
 # IDE specific ignores
 .vscode/
 .idea/

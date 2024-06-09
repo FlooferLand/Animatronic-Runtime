@@ -17,7 +17,8 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("fps_test_anim"):
 		animating = not animating
 		if animating:
-			audio.play(audio_playhead)
+			# audio.play(audio_playhead)
+			show_model()
 		else:
 			audio_playhead = audio.get_playback_position()
 			audio.stop()
