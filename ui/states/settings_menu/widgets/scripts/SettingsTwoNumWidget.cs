@@ -22,7 +22,6 @@ public partial class SettingsTwoNumWidget : SettingsBaseWidget {
 	
 	public override void _Ready() {
 		base._Ready();
-		UpdateWidgets();
 		
 		// Connecting signals
 		if (Engine.IsEditorHint()) return;

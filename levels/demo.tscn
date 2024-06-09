@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ct5xed7cpld63"]
+[gd_scene load_steps=7 format=3 uid="uid://ct5xed7cpld63"]
 
 [ext_resource type="PackedScene" uid="uid://belcb11csfxpb" path="res://objects/player/player.tscn" id="2_2ex8u"]
 [ext_resource type="Material" uid="uid://bm0mj0k8sd6xf" path="res://materials/floor_tiles/floor_tiles.material" id="2_gm5ot"]
 [ext_resource type="Environment" uid="uid://8a55eyyvo266" path="res://world_env.tres" id="3_8hrva"]
 [ext_resource type="PackedScene" uid="uid://chtqqsexsffsr" path="res://objects/display/Display.tscn" id="4_08h3s"]
 [ext_resource type="PackedScene" uid="uid://bc6p4mgsei7kd" path="res://objects/display/TestUI.tscn" id="5_h8pbb"]
+[ext_resource type="PackedScene" uid="uid://b2pyvsm38x4fd" path="res://objects/fps_test/fps_test.tscn" id="6_hve4l"]
 
 [node name="Demo" type="Node3D"]
 
@@ -28,3 +29,6 @@ light_energy = 2.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26799, 1.31341, -5.6529)
 
 [node name="TestUI" parent="Display" instance=ExtResource("5_h8pbb")]
+
+[node name="FPS Test" parent="." instance=ExtResource("6_hve4l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57552, -0.0402873, -5.6568)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2pyvsm38x4fd"]
+
+[ext_resource type="Script" path="res://objects/fps_test/fps_test.gd" id="1_kh4pd"]
+[ext_resource type="PackedScene" uid="uid://c62ka7dmerglw" path="res://objects/fps_test/model/Endo-02_REMASTER.glb" id="1_qltcr"]
+[ext_resource type="AudioStream" uid="uid://dphge84duct3a" path="res://audio/music/aileenstanley.mp3" id="3_o244r"]
+
+[node name="FPS Test" type="Node3D"]
+script = ExtResource("1_kh4pd")
+
+[node name="TestModel" parent="." instance=ExtResource("1_qltcr")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.299545, 0.262467)
+text = "Press P to show/hide the test model
+Press L after showing the model to play an animation test"
+font_size = 18
+
+[node name="Audio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_o244r")
+volume_db = -6.0
+bus = &"Tape"
+doppler_tracking = 1

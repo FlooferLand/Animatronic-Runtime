@@ -6,13 +6,16 @@ using Godot;
 [Tool]
 public partial class SettingsNumberWidget : SettingsBaseWidget {
 	// Nodes
-	[GetNode("{WidgetControl}/Container/SpinBox")] private SpinBox spinBox;
+	[GetNode("{WidgetControl}/Container/Tabbed")] private TabContainer tabber;
 	[GetNode("{WidgetControl}/Container/Slider")] private Slider slider;
+	[GetNode("{tabber}/SpinBox")] private SpinBox spinBox;
+	[GetNode("{tabber}/OverrideLabel")] private Label overrideLabel;
 	
 	// Signals
-	[Signal] public delegate void ValueChangedEventHandler(float value);
+	[Signal] public delegate void ValueChangedEventHandler(float value, bool isMin, bool isMax);
 	
 	// Settings
+	public string StringValueOverride = null;
 	private float min = 0f;
 	[Export] public float Min {
 		get => min;
@@ -42,7 +45,7 @@ public partial class SettingsNumberWidget : SettingsBaseWidget {
 	
 	public override void _Ready() {
 		base._Ready();
-		UpdateWidgets();
+		tabber.CurrentTab = 0;  // SpinBox
 		
 		// Connecting signals
 		if (Engine.IsEditorHint()) return;
@@ -50,7 +53,12 @@ public partial class SettingsNumberWidget : SettingsBaseWidget {
 			range.ValueChanged += newValue => {
 				Value = (float) newValue;
 				UpdateWidgets();
-				EmitSignal(nameof(ValueChanged), Value);
+				EmitSignal(
+					nameof(ValueChanged),
+					/* Value */ Value,
+					/* isMin */ Mathf.RoundToInt(Value) == Mathf.RoundToInt(Min), // TODO: Write better float comparison
+					/* isMax */ Mathf.RoundToInt(Value) == Mathf.RoundToInt(Max)  // TODO: Write better float comparison
+				);
 			};
 		}
 	}
@@ -61,6 +69,16 @@ public partial class SettingsNumberWidget : SettingsBaseWidget {
 			range.MinValue = min;
 			range.MaxValue = max;
 			range.Value = value;
+		}
+
+		if (tabber != null) {
+			if (StringValueOverride == null) {
+				tabber.CurrentTab = 0; // SpinBox
+			}
+			else {
+				overrideLabel.Text = StringValueOverride;
+				tabber.CurrentTab = 1; // Override text
+			}
 		}
 	}
 }

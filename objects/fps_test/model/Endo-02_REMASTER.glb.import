@@ -1,0 +1,170 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c62ka7dmerglw"
+path="res://.godot/imported/Endo-02_REMASTER.glb-db35d81a81210198d7726dfe0adfc9af.scn"
+
+[deps]
+
+source_file="res://objects/fps_test/model/Endo-02_REMASTER.glb"
+dest_files=["res://.godot/imported/Endo-02_REMASTER.glb-db35d81a81210198d7726dfe0adfc9af.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"@MATERIAL:21": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"@MATERIAL:22": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"@MATERIAL:30": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"@MATERIAL:31": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Blackwire": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Endo01": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Endo01.001": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Endo02": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Endo02.001": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Endo_Theet": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Eye1": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Eyeglow": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"GlowRed": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"GreyWire": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Metal_g": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Metal_g.001": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Metal_nut": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Metal_nut.001": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Metal_yellow": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Motor": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Motor.001": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"NUT_rusty_2": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"NUT_rusty_2.001": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Nut_lessrust": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Nut_lessrust.001": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Orang_Wire": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"PCB2": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"PneumaticTube": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"RedWire.001": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Rod": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"Rod.001": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+},
+"iris": {
+"use_external/enabled": true,
+"use_external/path": "res://objects/fps_test/model/Endo.material"
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+gltf/naming_version=1
+gltf/embedded_image_handling=1

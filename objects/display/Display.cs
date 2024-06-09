@@ -5,6 +5,8 @@ using System.Collections.Generic;
 // Made with the help of Chevifier's tutorial:
 // https://youtu.be/q0-jtBFrVgE
 
+// TODO: Make it so when the display encounters any error it hides its children (The UI). This stops the UI from jumpscaring the player
+
 [Tool]
 public partial class Display : Node3D, IBaseInteractable, ILookDetector {
 	// Nodes

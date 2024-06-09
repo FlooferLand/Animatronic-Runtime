@@ -5,20 +5,31 @@
 
 [node name="NumberWidget" instance=ExtResource("1_v6fm2")]
 script = ExtResource("2_225vk")
-Max = 0.0
 
 [node name="Label" parent="." index="0"]
 text = "Placeholder"
 
 [node name="Container" type="VBoxContainer" parent="CenterContainer" index="0"]
-custom_minimum_size = Vector2(256, 0)
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 
-[node name="SpinBox" type="SpinBox" parent="CenterContainer/Container" index="0"]
+[node name="Tabbed" type="TabContainer" parent="CenterContainer/Container" index="0"]
+layout_mode = 2
+current_tab = 0
+tabs_visible = false
+
+[node name="SpinBox" type="SpinBox" parent="CenterContainer/Container/Tabbed" index="1"]
 layout_mode = 2
 max_value = 0.0
+metadata/_tab_index = 0
+
+[node name="OverrideLabel" type="Label" parent="CenterContainer/Container/Tabbed" index="2"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
 
 [node name="Slider" type="HSlider" parent="CenterContainer/Container" index="1"]
 layout_mode = 2
 size_flags_vertical = 4
+focus_mode = 0
 max_value = 0.0

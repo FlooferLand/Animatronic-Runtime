@@ -7,5 +7,9 @@
 split_offset = 48
 script = ExtResource("2_r7iyg")
 
+[node name="Label" parent="." index="0"]
+text = "Placeholder"
+
 [node name="Dropdown" type="OptionButton" parent="CenterContainer" index="0"]
 layout_mode = 2
+focus_mode = 0
