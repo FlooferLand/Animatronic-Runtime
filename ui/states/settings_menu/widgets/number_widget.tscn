@@ -10,7 +10,7 @@ script = ExtResource("2_225vk")
 text = "Placeholder"
 
 [node name="Container" type="VBoxContainer" parent="CenterContainer" index="0"]
-custom_minimum_size = Vector2(320, 0)
+custom_minimum_size = Vector2(384, 0)
 layout_mode = 2
 
 [node name="Tabbed" type="TabContainer" parent="CenterContainer/Container" index="0"]

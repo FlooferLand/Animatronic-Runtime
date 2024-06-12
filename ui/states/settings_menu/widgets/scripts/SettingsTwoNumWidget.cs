@@ -1,8 +1,7 @@
 namespace Project;
 using Godot;
 
-[Tool]
-public partial class SettingsTwoNumWidget : SettingsBaseWidget {
+public partial class SettingsTwoNumWidget : SettingsBaseWidget<Vector2> {
 	// Nodes
 	[GetNode("{WidgetControl}/Container/NumOne")] private SpinBox numOne;
 	[GetNode("{WidgetControl}/Container/NumTwo")] private SpinBox numTwo;
@@ -10,15 +9,19 @@ public partial class SettingsTwoNumWidget : SettingsBaseWidget {
 	// Signals
 	[Signal] public delegate void ValueChangedEventHandler(Vector2 value);
 	
-	// Variables
-	private Vector2 value;
-	public Vector2 Value {
-		get => value;
-		set {
-			this.value = value;
-			UpdateWidgets();
+	#region internal
+	public override void set_Value(Vector2 value) {
+		base.set_Value(value);
+		InternalValue = value;
+		UpdateWidgets();
+	}
+	protected override void UpdateWidgets() {
+		if (numOne != null && numTwo != null) {
+			numOne.Value = Value.X;
+			numTwo.Value = Value.Y;
 		}
 	}
+	#endregion
 	
 	public override void _Ready() {
 		base._Ready();
@@ -27,20 +30,11 @@ public partial class SettingsTwoNumWidget : SettingsBaseWidget {
 		if (Engine.IsEditorHint()) return;
 		numOne.ValueChanged += newValue => {
 			Value = Value.WithX(newValue);
-			UpdateWidgets();
 			EmitSignal(nameof(ValueChanged), Value);
 		};
 		numTwo.ValueChanged += newValue => {
 			Value = Value.WithY(newValue);
-			UpdateWidgets();
 			EmitSignal(nameof(ValueChanged), Value);
 		};
-	}
-
-	private void UpdateWidgets() {
-		if (numOne != null && numTwo != null) {
-			numOne.Value = Value.X;
-			numTwo.Value = Value.Y;
-		}
 	}
 }

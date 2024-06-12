@@ -23,6 +23,8 @@
     <EmbeddedResource Remove="ui\states\settings_menu\scripts\OLD\**" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="GodotGetNode\GodotGetNode\GodotGetNode.csproj" />
+    <ProjectReference Include="GodotGetNode\GodotGetNode\GodotGetNode.csproj"
+                      OutputItemType="Analyzer"
+                      ReferenceOutputAssembly="true"/>
   </ItemGroup>
 </Project>

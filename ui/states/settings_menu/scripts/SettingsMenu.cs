@@ -1,7 +1,8 @@
 namespace Project;
 using Godot;
 
-[Tool]
+// TODO: Switch the settings to be made at compile-time only (a pain to do because Godot's Tool system sucks)
+
 public partial class SettingsMenu : Control {
     #region Tabs
     [GetNode("Tabs/Display/List")]       private VBoxContainer displayTab;
@@ -17,10 +18,6 @@ public partial class SettingsMenu : Control {
     
     [GetNode($"{{{nameof(graphicsTab)}}}/LodThreshold")] private SettingsNumberWidget lodThresholdWidget;
     #endregion
-
-    // TODO: Switch the settings to be made at compile-time only (a pain to do because Godot's Tool system sucks)
-    
-    // TODO: Switch the settings to be completely made through code, because Godot is shit and keeps resetting my nodes
     
     public override void _Ready() {
         // V-Sync
@@ -30,27 +27,25 @@ public partial class SettingsMenu : Control {
         vsyncWidget.SetValueEnum(EngineSettings.Data.Display.VSync);
         
         // FPS cap
-        fpsCapWidget.Value = EngineSettings.Data.Display.FramerateCap;  // TODO: Remove this!! temporary patch
-        fpsCapWidget.ValueChanged += (value, isMin, isMax) => {
-            int val;
-            if (isMin || isMax) {
-                val = 0;
-                // ReSharper disable once StringLiteralTypo
-                fpsCapWidget.StringValueOverride = "MAXIMUM FPS WOAAAOOOWW";
-                Engine.SetMaxFps(0);
-            } else {
-                val = (int) value;
-                fpsCapWidget.StringValueOverride = null;
-                Engine.SetMaxFps(val);
-            }
-            EngineSettings.Data.Display.FramerateCap = val;
-        };
-        
-        // LoD threshold
-        lodThresholdWidget.Value = EngineSettings.Data.Graphics.LodThreshold;  // TODO: Remove this!! temporary patch
-        lodThresholdWidget.ValueChanged += (value, _, _) => {
-            EngineSettings.Data.Graphics.LodThreshold = value;
-            GetTree().Root.MeshLodThreshold = value;
-        };
+        // fpsCapWidget.ValueChanged += (value, isMin, isMax) => {
+        //     int val;
+        //     if (isMin || isMax) {
+        //         val = 0;
+        //         // ReSharper disable once StringLiteralTypo
+        //         fpsCapWidget.StringValueOverride = "MAXIMUM FPS WOAAAOOOWW";
+        //         Engine.SetMaxFps(0);
+        //     } else {
+        //         val = (int) value;
+        //         fpsCapWidget.StringValueOverride = null;
+        //         Engine.SetMaxFps(val);
+        //     }
+        //     EngineSettings.Data.Display.FramerateCap = val;
+        // };
+        // 
+        // // LoD threshold
+        // lodThresholdWidget.ValueChanged += (value, _, _) => {
+        //     EngineSettings.Data.Graphics.LodThreshold = value;
+        //     GetTree().Root.MeshLodThreshold = value;
+        // };
     }
 }

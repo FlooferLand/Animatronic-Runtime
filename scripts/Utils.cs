@@ -94,4 +94,8 @@ public static class Utils {
         return IsTouchCapableHomebrew() || DisplayServer.IsTouchscreenAvailable();
     }
     #endregion
+
+    public static SceneTree GetMainSceneTree() {
+        return (SceneTree)Engine.GetMainLoop();
+    }
 }

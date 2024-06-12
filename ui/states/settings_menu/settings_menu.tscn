@@ -57,6 +57,7 @@ WidgetName = "Resolution"
 layout_mode = 2
 Min = 10.0
 Max = 500.0
+Step = 5.0
 WidgetName = "FPS cap"
 
 [node name="VSync" parent="Tabs/Display/List" instance=ExtResource("2_rtelv")]

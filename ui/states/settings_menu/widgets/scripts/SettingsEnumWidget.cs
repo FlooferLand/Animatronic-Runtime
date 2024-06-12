@@ -5,42 +5,40 @@ using Godot.Collections;
 namespace Project;
 using Godot;
 
-[Tool]
-public partial class SettingsEnumWidget : SettingsBaseWidget {
+public partial class SettingsEnumWidget : SettingsBaseWidget<int> {
     // Nodes
     [GetNode("{WidgetControl}/Dropdown")] private OptionButton dropdown;
     
     // Signals ? (not really)
-    public delegate void OnItemSelected<in T>(T value) where T: struct, Enum;
+    public delegate void OnItemSelected<in TEnum>(TEnum value) where TEnum: struct, Enum;
     
     // Variables
     private Type enumType = null;
     public System.Collections.Generic.Dictionary<int, Enum> EnumValues = new();
     private System.Collections.Generic.Dictionary<Enum, int> enumIndexes = new();
-    private int selected;
-    public int Value {
-	    get => selected;
-	    set {
-		    selected = value;
-		    UpdateWidgets();
-	    }
+
+    #region internal
+    public override void set_Value(int value) {
+	    base.set_Value(value);
+	    InternalValue = value;
+	    UpdateWidgets();
     }
 
-    private void UpdateWidgets() {
+    protected override void UpdateWidgets() {
 	    if (enumType == null || dropdown == null) return;
-	    
-	    dropdown.Selected = selected;  // TODO: update this
+	    dropdown.Selected = InternalValue;  // TODO: update this
     }
+    #endregion
 
     // _Ready but better
-    public void Init<T>(OnItemSelected<T> onItemSelected) where T: struct, Enum {
+    public void Init<TEnum>(OnItemSelected<TEnum> onItemSelected) where TEnum: struct, Enum {
 	    if (dropdown == null) {
 		    Log.Error($"The dropdown enum widget for the setting \"{WidgetName}\" is null");
 		    return;
 	    }
 	    
 	    // Enum stuff
-	    enumType = typeof(T);
+	    enumType = typeof(TEnum);
 	    var values = enumType.GetEnumValues();
 
 	    for (int i = 0; i < values.Length; i++) {
@@ -60,8 +58,7 @@ public partial class SettingsEnumWidget : SettingsBaseWidget {
 		    } else {
 			    Log.Error($"\"{nameof(EnumValues)}\" has 0 values in {nameof(dropdown.ItemSelected)}");
 		    }
-		    UpdateWidgets();
-		    if (EnumValues[Value] is T heeHeeHaw)
+		    if (EnumValues[Value] is TEnum heeHeeHaw)
 				onItemSelected(heeHeeHaw);
 	    };
     }
