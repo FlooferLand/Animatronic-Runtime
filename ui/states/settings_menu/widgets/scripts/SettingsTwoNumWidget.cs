@@ -10,11 +10,6 @@ public partial class SettingsTwoNumWidget : SettingsBaseWidget<Vector2> {
 	[Signal] public delegate void ValueChangedEventHandler(Vector2 value);
 	
 	#region internal
-	public override void set_Value(Vector2 value) {
-		base.set_Value(value);
-		InternalValue = value;
-		UpdateWidgets();
-	}
 	protected override void UpdateWidgets() {
 		if (numOne != null && numTwo != null) {
 			numOne.Value = Value.X;

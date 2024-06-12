@@ -20,32 +20,42 @@ public partial class SettingsMenu : Control {
     #endregion
     
     public override void _Ready() {
+        #region Display tab
+        resolutionWidget.LoadFrom(EngineSettings.Data.Display.Resolution);
+        resolutionWidget.ValueChanged += value => {
+            EngineSettings.Data.Display.Resolution = (Vector2I) value;
+        };
+        
         // V-Sync
         vsyncWidget.Init<DisplayServer.VSyncMode>(value => {
             EngineSettings.Data.Display.VSync = value;
         });
+        vsyncWidget.LoadFrom(EngineSettings.Data.Display.VSync);
         vsyncWidget.SetValueEnum(EngineSettings.Data.Display.VSync);
         
         // FPS cap
-        // fpsCapWidget.ValueChanged += (value, isMin, isMax) => {
-        //     int val;
-        //     if (isMin || isMax) {
-        //         val = 0;
-        //         // ReSharper disable once StringLiteralTypo
-        //         fpsCapWidget.StringValueOverride = "MAXIMUM FPS WOAAAOOOWW";
-        //         Engine.SetMaxFps(0);
-        //     } else {
-        //         val = (int) value;
-        //         fpsCapWidget.StringValueOverride = null;
-        //         Engine.SetMaxFps(val);
-        //     }
-        //     EngineSettings.Data.Display.FramerateCap = val;
-        // };
-        // 
-        // // LoD threshold
-        // lodThresholdWidget.ValueChanged += (value, _, _) => {
-        //     EngineSettings.Data.Graphics.LodThreshold = value;
-        //     GetTree().Root.MeshLodThreshold = value;
-        // };
+        fpsCapWidget.LoadFrom(EngineSettings.Data.Display.FramerateCap);
+        fpsCapWidget.ValueChanged += (value, isMin, isMax) => {
+            int val;
+            if (isMin || isMax) {
+                val = 0;
+                // ReSharper disable once StringLiteralTypo
+                fpsCapWidget.StringValueOverride = "MAXIMUM FPS WOAAAOOOWW";
+                Engine.SetMaxFps(0);
+            } else {
+                val = (int) value;
+                fpsCapWidget.StringValueOverride = null;
+                Engine.SetMaxFps(val);
+            }
+            EngineSettings.Data.Display.FramerateCap = val;
+        };
+        #endregion
+        
+        // LoD threshold
+        lodThresholdWidget.LoadFrom(EngineSettings.Data.Graphics.LodThreshold);
+        lodThresholdWidget.ValueChanged += (value, _, _) => {
+            EngineSettings.Data.Graphics.LodThreshold = value;
+            GetTree().Root.MeshLodThreshold = value;
+        };
     }
 }

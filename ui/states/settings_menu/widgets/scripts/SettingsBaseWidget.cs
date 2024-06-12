@@ -6,9 +6,15 @@ public abstract partial class SettingsBaseWidget<TValue> : HSplitContainer {
 	[GetNode("Label")] private Label widgetLabelControl;
 	[GetNode("CenterContainer")] protected Control WidgetControl;
 	
-	//
+	// Variables
 	protected TValue InternalValue;
-	public TValue Value;
+	protected virtual TValue Value {
+		get => InternalValue;
+		set {
+			InternalValue = value;
+			UpdateWidgets();
+		}
+	}
 	
 	// Settings
 	private string widgetName = "Placeholder";
@@ -23,13 +29,6 @@ public abstract partial class SettingsBaseWidget<TValue> : HSplitContainer {
 	
 	public override void _Ready() {
 		widgetLabelControl.Text = widgetName;
-	}
-
-	public virtual void set_Value(TValue value) {
-		InternalValue = value;
-	}
-	public virtual TValue get_Value() {
-		return InternalValue;
 	}
 	
 	public virtual void LoadFrom(TValue value) {

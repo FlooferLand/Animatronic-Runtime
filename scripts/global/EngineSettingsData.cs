@@ -3,36 +3,24 @@
 namespace Project.Settings;
 using Godot;
 
-// TODO: Add graphical and brightness stuff
-
-// TODO: Separate data from the logic (already sorta done with FramerateCap)
-//       There needs to be a way to load data with the same code/logic (both SettingsMenu and EngineSettings sharing stuff)
-
 public class Display {
-	// Backing fields
-	private DisplayServer.VSyncMode vsync = DisplayServer.WindowGetVsyncMode();
+	// TODO: Add brightness settings
 	
 	// Resolution; Defaults to the screen resolution
 	public Vector2I Resolution = DisplayServer.ScreenGetSize();
 
 	// Framerate limiter, for battery-saving reasons
-	public int FramerateCap = 300;
+	public int FramerateCap = 240;
 
 	/// Nuh uhh
-	public DisplayServer.VSyncMode VSync {
-		get => vsync;
-		set {
-			vsync = value;
-			DisplayServer.WindowSetVsyncMode(value);
-		}
-	}
+	public DisplayServer.VSyncMode VSync = DisplayServer.WindowGetVsyncMode();
 }
 
 public class Graphics {
 	// TODO: Add graphical settings
 	
 	// LOD distance tweak
-	public float LodThreshold = 0.8f;
+	public float LodThreshold = Utils.IsHomebrew() ? 0.3f : 0.8f;
 }
 
 public class Performance {
@@ -48,6 +36,7 @@ public class Performance {
 	}
 
 	/// Property for UpdateTitle; Has a default window title
+	/// TODO: Move to the new settings system (SettingsMenu)
 	public bool UpdateTitle {
 		get => updateTitle;
 		set {

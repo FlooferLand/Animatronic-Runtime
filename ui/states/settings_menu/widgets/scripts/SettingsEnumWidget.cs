@@ -18,10 +18,12 @@ public partial class SettingsEnumWidget : SettingsBaseWidget<int> {
     private System.Collections.Generic.Dictionary<Enum, int> enumIndexes = new();
 
     #region internal
-    public override void set_Value(int value) {
-	    base.set_Value(value);
-	    InternalValue = value;
-	    UpdateWidgets();
+    public void LoadFrom<TEnum>(TEnum value) where TEnum: struct, Enum {
+	    int index = SetValueEnum(value);
+	    if (index >= 0) {
+		    Value = index;
+		    base.LoadFrom(index);
+	    }
     }
 
     protected override void UpdateWidgets() {
@@ -64,17 +66,15 @@ public partial class SettingsEnumWidget : SettingsBaseWidget<int> {
     }
 
     /// Finds the index of the enum and sets the value.
-    /// Sets nothing and returns false if the value wasn't set
-    public bool SetValueEnum(Enum @enum) {
-	    if (EnumValues.Count == 0) return false;
-
+    /// Sets nothing and returns -1 if the value wasn't set
+    public int SetValueEnum(Enum @enum) {
+	    if (EnumValues.Count == 0) return -1;
 	    if (enumIndexes.TryGetValue(@enum, out int val)) {
 		    Value = val;
 		    dropdown.Selected = val;
-		    return true;
+		    return val;
 	    }
-
-	    return false;
+	    return -1;
     }
 }
 

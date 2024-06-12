@@ -21,12 +21,6 @@ public partial class SettingsNumberWidget : SettingsBaseWidget<float> {
 	[Export] public string Postfix = "";
 	
 	#region internal
-	public override void set_Value(float value) {
-		base.set_Value(value);
-		InternalValue = value;
-		UpdateWidgets();
-	}
-	
 	protected override void UpdateWidgets() {
 		foreach (var range in new Range[] {spinBox, slider}) {
 			if (range == null) continue;
