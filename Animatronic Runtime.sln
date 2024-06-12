@@ -2,6 +2,8 @@
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animatronic Runtime", "Animatronic Runtime.csproj", "{EA4FBA28-BE5C-4A2A-8A02-E2A2759EAFA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodotGetNode", "GodotGetNode\GodotGetNode\GodotGetNode.csproj", "{26B17FB6-3600-4861-9D8C-1F9045E43E5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 	Debug|Any CPU = Debug|Any CPU
@@ -15,5 +17,11 @@ Global
 		{EA4FBA28-BE5C-4A2A-8A02-E2A2759EAFA7}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
 		{EA4FBA28-BE5C-4A2A-8A02-E2A2759EAFA7}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
 		{EA4FBA28-BE5C-4A2A-8A02-E2A2759EAFA7}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{26B17FB6-3600-4861-9D8C-1F9045E43E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B17FB6-3600-4861-9D8C-1F9045E43E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26B17FB6-3600-4861-9D8C-1F9045E43E5F}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B17FB6-3600-4861-9D8C-1F9045E43E5F}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{26B17FB6-3600-4861-9D8C-1F9045E43E5F}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B17FB6-3600-4861-9D8C-1F9045E43E5F}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

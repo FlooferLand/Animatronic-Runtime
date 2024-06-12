@@ -5,17 +5,24 @@
     <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'ios' ">net8.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>AnimatronicRuntime</RootNamespace>
+
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>./.godot/generated</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="GodotGetNode" Version="0.1.3" />
+    <!--PackageReference Include="GodotGetNode" Version="*" /-->
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="script_templates\**" />
     <Compile Remove="ui\states\settings_menu\scripts\OLD\**" />
+    <Compile Remove="GodotGetNode\**" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="script_templates\**" />
     <EmbeddedResource Remove="ui\states\settings_menu\scripts\OLD\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="GodotGetNode\GodotGetNode\GodotGetNode.csproj" />
   </ItemGroup>
 </Project>

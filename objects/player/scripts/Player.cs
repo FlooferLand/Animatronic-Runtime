@@ -7,11 +7,11 @@ using Godot;
 
 public partial class Player : CharacterBody3D {
 	#region Nodes
-	[GetNode("Head")]				private Node3D head;
-	[GetNode("Head/Camera")]		private Camera3D camera;
-	[GetNode("Head/InteractRay")]	private RayCast3D interactRay;
-	[GetNode("Head/Flashlight")]	private Flashlight flashlight;
-	[GetNode("FootstepManager")]	private FootstepManager footstepManager;
+	[GetNode("Head")]						private Node3D head;
+	[GetNode(nameof(head), "Camera")]		private Camera3D camera;
+	[GetNode(nameof(head), "InteractRay")]	private RayCast3D interactRay;
+	[GetNode(nameof(head), "Flashlight")]	private Flashlight flashlight;
+	[GetNode("FootstepManager")]			private FootstepManager footstepManager;
 	
 	// UI
 	[GetNode("{camera}/Canvas/PlayerHUD")]	private Control playerHud;
