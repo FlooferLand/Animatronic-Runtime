@@ -10,10 +10,6 @@
     <CompilerGeneratedFilesOutputPath>./.godot/generated</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <!--PackageReference Include="GodotGetNode" Version="*" /-->
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Remove="script_templates\**" />
     <Compile Remove="ui\states\settings_menu\scripts\OLD\**" />
     <Compile Remove="GodotGetNode\**" />
@@ -26,5 +22,8 @@
     <ProjectReference Include="GodotGetNode\GodotGetNode\GodotGetNode.csproj"
                       OutputItemType="Analyzer"
                       ReferenceOutputAssembly="true"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="YamlDotNet" Version="15.1.6" />
   </ItemGroup>
 </Project>

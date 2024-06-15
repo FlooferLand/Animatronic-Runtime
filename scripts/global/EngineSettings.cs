@@ -1,18 +1,28 @@
-namespace Project; using Settings;
-using Newtonsoft.Json;
+using System.Xml;
+using Godot.Collections;
+using YamlDotNet.Serialization;
+namespace Project;
+using YamlDotNet.Serialization.NamingConventions;
+using Settings;
 using System;
 using Godot;
 
 /// Class for storing things like the game settings
 public static class EngineSettings {
-	public static EngineSettingsData Data = new();
+	private static Dictionary<string, Variant> data = new();
+	private static ISerializer serializer = new SerializerBuilder()
+		.WithNamingConvention(CamelCaseNamingConvention.Instance)
+		.Build();
+	private static IDeserializer deserializer = new DeserializerBuilder()
+		.WithNamingConvention(CamelCaseNamingConvention.Instance)
+		.Build();
 
 	/// Loading all the settings
 	public static void LoadAll() {
 		try {
 			if (FileAccess.FileExists(Paths.SettingsPath)) {
 				FileAccess file = FileAccess.Open(Paths.SettingsPath, FileAccess.ModeFlags.Read);
-				Data = JsonConvert.DeserializeObject<EngineSettingsData>(file.GetAsText());
+				data = deserializer.Deserialize<Dictionary<string, Variant>>(file.GetAsText());
 				file.Close();
 			} else {
 				// Save the default settings
@@ -29,14 +39,10 @@ public static class EngineSettings {
 
 	/// Save all the settings
 	public static void SaveAll() {
-		var settings = new JsonSerializerSettings {
-			Formatting = Formatting.Indented
-		};
-		
 		// Writing data to the settings file
 		FileAccess file = FileAccess.Open(Paths.SettingsPath, FileAccess.ModeFlags.Write);
 		if (file != null) {
-			file.StoreString(JsonConvert.SerializeObject(Data, settings));
+			file.StoreString(serializer.Serialize(data));
 			file.Close();
 		} else {
 			Log.Error(FileAccess.GetOpenError());

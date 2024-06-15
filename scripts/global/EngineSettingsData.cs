@@ -10,7 +10,7 @@ public class Display {
 	public Vector2I Resolution = DisplayServer.ScreenGetSize();
 
 	// Framerate limiter, for battery-saving reasons
-	public int FramerateCap = 240;
+	public int FramerateCap = (int) DisplayServer.ScreenGetRefreshRate();
 
 	/// Nuh uhh
 	public DisplayServer.VSyncMode VSync = DisplayServer.WindowGetVsyncMode();
