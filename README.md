@@ -5,6 +5,12 @@
 ![Issue tracker](https://img.shields.io/github/issues/FlooferLand/Animatronic-Runtime?style=plastic&link=https://github.com/FlooferLand/Animatronic-Runtime/issues)
 ![Lines of code](https://img.shields.io/tokei/lines/github/FlooferLand/Animatronic-Runtime?style=plastic&link=https://github.com/FlooferLand/Animatronic-Runtime)
 
+### ⚠️ ARCHIVED
+
+This project has been moved over to the [Blubuild repository](https://github.com/FlooferLand/blubuild)!
+
+---
+
 _The modern home of computer animated animatronic simulations_
 
 FlooferLand's Animatronic Runtime is a simulation and animation engine for animatronic shows the likes of [The Rockafire Explosion](https://www.youtube.com/watch?v=8SeSavNd9_c&list=PLB8A625C54121DA04)
